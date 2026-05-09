@@ -1,19 +1,14 @@
 {
-  "name": "Portfolio Template",
-  "short_name": "Template",
+  "name": "Geinel Niño A. Dungao - Portfolio",
+  "short_name": "Geinel",
   "icons": [
     {
-      "src": "/assets/favicons/apple-touch-icon.png",
-      "sizes": "180x180",
-      "type": "image/png"
-    },
-    {
-      "src": "/assets/favicons/favicon-32x32.png",
-      "sizes": "32x32",
-      "type": "image/png"
+      "src": "/assets/profile-frames/frame-000.webp",
+      "sizes": "any",
+      "type": "image/webp"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#36518f",
   "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "/",

@@ -205,7 +205,7 @@ app.get("/healthz", (_req, res) => {
 
 app.get("/config.js", (_req, res) => {
   res.type("application/javascript").send(
-    `window.BRYL_CONFIG=${JSON.stringify({
+    `window.GEINEL_CONFIG=${JSON.stringify({
       assetBaseUrl,
       chatEnabled: Boolean(genAI),
       model: geminiModel,
@@ -295,7 +295,7 @@ app.post("/api/chat", requireAllowedChatOrigin, chatLimiter, async (req, res) =>
         },
         safetySettings,
         systemInstruction:
-          `You are the assistant for Bryl Lim's personal portfolio. Use only the Markdown knowledge base below as context.\n\nRules:\n- Answer naturally in 1-4 short sentences.\n- Only answer questions that are directly relevant to Bryl's portfolio, projects, skills, experience, and contact details.\n- If the visitor asks about anything else, politely refuse and say you only answer questions about Bryl's professional background.\n- If the visitor greets you, briefly say what you can answer about.\n- Do not invent facts. Do not mention implementation details.\n\nMarkdown knowledge base:\n${knowledge}`
+          `You are the assistant for Geinel Niño A. Dungao's personal portfolio. Use only the Markdown knowledge base below as context.\n\nRules:\n- Answer naturally in 1-4 short sentences.\n- Only answer questions that are directly relevant to Geinel's portfolio, projects, skills, experience, and contact details.\n- If the visitor asks about anything else, politely refuse and say you only answer questions about Geinel's professional background.\n- If the visitor greets you, briefly say what you can answer about.\n- Do not invent facts. Do not mention implementation details.\n\nMarkdown knowledge base:\n${knowledge}`
       }
     });
 

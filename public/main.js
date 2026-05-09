@@ -1,4 +1,4 @@
-const config = window.BRYL_CONFIG || {};
+const config = window.GEINEL_CONFIG || {};
 const assetBaseUrl = (config.assetBaseUrl || "/assets").replace(/\/$/, "");
 
 const assetUrl = (path) => `${assetBaseUrl}/${path.replace(/^\//, "")}`;
@@ -14,18 +14,23 @@ themeToggle?.addEventListener("click", () => {
 });
 
 const galleryTrack = document.querySelector("#gallery-track");
-const galleryImages = [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15];
+const galleryCount = 7;
 let galleryOffset = 0;
+
+function makePlaceholder(number) {
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="220" height="160" viewBox="0 0 220 160"><rect width="220" height="160" fill="#e2e8f0"/><circle cx="65" cy="52" r="14" fill="none" stroke="#94a3b8" stroke-width="1.5"/><polyline points="30,115 72,68 108,96 148,62 190,115" fill="none" stroke="#94a3b8" stroke-width="1.5"/><text x="110" y="142" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#94a3b8">Photo ${number}</text></svg>`;
+  return `data:image/svg+xml,${encodeURIComponent(svg)}`;
+}
 
 function renderGallery() {
   galleryTrack.innerHTML = "";
-  galleryImages.forEach((imageNumber) => {
+  for (let i = 1; i <= galleryCount; i++) {
     const img = document.createElement("img");
-    img.src = assetUrl(`gallery/gallery-${imageNumber}.webp`);
-    img.alt = `Gallery image ${imageNumber}`;
+    img.src = makePlaceholder(i);
+    img.alt = `Gallery photo ${i}`;
     img.loading = "lazy";
     galleryTrack.append(img);
-  });
+  }
   galleryTrack.style.transform = `translateX(-${galleryOffset}px)`;
   document.querySelector(".gallery-prev").disabled = galleryOffset <= 0;
 }
@@ -95,6 +100,6 @@ chatForm?.addEventListener("submit", async (event) => {
     pending.textContent = reply || "I could not respond right now.";
     chatMessages.push({ role: "assistant", text: pending.textContent });
   } catch {
-    pending.textContent = "Chat is unavailable right now. Please email hello@example.com.";
+    pending.textContent = "Chat is unavailable right now. Please email geineldungao012@gmail.com.";
   }
 });

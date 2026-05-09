@@ -1,95 +1,127 @@
-# Bryl Lim Portfolio Knowledge Base
+# Geinel Niño A. Dungao Portfolio Knowledge Base
 
 ## Profile
 
-Bryl Lim is based in Metro Manila, Philippines.
+Geinel Niño A. Dungao is based in Post Proper Southside, Taguig City, Philippines.
 
-Bryl works as an AI engineer, software engineer, and content creator.
+Geinel is an Information Technology student, Full-Stack Web & IoT Developer, and cloud computing enthusiast.
 
-Bryl specializes in building software solutions with JavaScript, Python, PHP, and modern web technologies.
+Geinel specializes in Arduino-based IoT systems, web development, and cloud computing communities.
 
 ## About
 
-Bryl is a full-stack software engineer who develops solutions with JavaScript, Python, and PHP.
+Geinel is currently a Full-Stack Web & IoT Developer Intern at Cornersteel Systems Corporation.
 
-He works on modern web applications, mobile apps, search engine optimization, digital marketing, and code tutorials.
+He is an active leader in cloud computing communities, serving as Technical Project Manager of the DevTeam at AWS Cloud Club PUP Manila.
 
-He has helped startups and MSMEs grow and streamline their processes through software solutions.
+He is also a Compliance Analyst at Google Developer Groups on Campus PUP, a member of the Cloud Computing Department at PUP Manila Microsoft Student Community, and a Creatives member at AWS User Group e:Novators Philippines.
 
-He has built a community of over 200,000 developers through knowledge sharing and mentorship.
+With a background in competitive robotics, Geinel won multiple national and international awards as a member of the Taguig Robotics Team from 2017 to 2020.
 
-Bryl has recently focused more deeply on artificial intelligence, including AI tools, intelligent applications, AI-powered solutions, and generative AI workflows.
+He finished his first year at PUP with a GPA of 1.19 and his second year with a GPA of 1.22.
 
 ## Skills And Tech Stack
 
-Frontend technologies: JavaScript, TypeScript, React, Next.js, Vue.js, and Tailwind CSS.
+Frontend technologies: HTML, CSS, JavaScript, React, Next.js, Tailwind CSS, and Laravel.
 
-Backend technologies: Node.js, Python, PHP, Laravel, PostgreSQL, and MongoDB.
+Backend technologies: Python, Java, C, C++, SQL, and Google Apps Script.
 
-DevOps and cloud technologies: AWS, Docker, Kubernetes, and GitHub Actions.
+IoT and hardware: Arduino, Robotics (Hardware and Software), and Prompt Engineering.
+
+Cloud and infrastructure: AWS Cloud, Project Management, Network Administration, Windows Server, Computer Networking, Hardware Assembly, Installation, Maintenance, and Troubleshooting.
+
+Multimedia and design: Photography, Videography, Photo Editing, and Video Editing.
+
+Languages: Fluent in English and Filipino.
 
 ## Current And Past Experience
 
-AI Engineer at Standard Chartered in 2025.
+Full-Stack Web & IoT Developer Intern at Cornersteel Systems Corporation (Present).
 
-AI Ops Engineer at Centre of Excellence for GenAI, Cambridge in 2025.
+Technical Project Manager - DevTeam at AWS Cloud Club PUP (2025 to Present).
 
-Senior Full-Stack Developer at Core Technology.
+Cloud Computing and Infrastructure Team member at AWS Cloud Club PUP (2024 to Present).
 
-Software Engineering Lead at PocketDevs in 2022.
+Creatives - Office of Creative Services at AWS User Group e:Novators Philippines (2025 to Present).
 
-Lead Application Developer at Bluewind Asia in 2021.
+Cloud Solutions Team - Compliance Analyst at Google Developer Groups on Campus PUP (2025 to Present).
 
-Software Engineer at GCM in 2020.
+Cloud Solutions Team - Curriculum Analyst at Google Developer Groups on Campus PUP (2024 to 2025).
 
-Bryl studied BS Information Technology at the University of San Carlos in 2019.
+Cloud Computing Department at PUP Manila Microsoft Student Community (2024 to Present).
 
-Bryl wrote his first line of code in 2015.
+Logistics - Operations Team at AWS Cloud Club PUP (2024 to 2025).
+
+IoT Developer Intern at Cornersteel Systems Corporation in 2025.
+
+Robotics Competitor & Researcher at Taguig Robotics Team from 2017 to 2020.
+
+## Education
+
+Studying Information Technology at Polytechnic University of the Philippines, Sta. Mesa since 2023.
+
+Graduated with High Honors from Senior High School (Science, Technology, Engineering, and Mathematics) at Sen. Renato "Compañero" Cayetano Memorial Science and Technology High School in 2023.
+
+Graduated with Honors from Junior High School at Sen. Renato "Compañero" Cayetano Memorial Science and Technology High School in 2021.
+
+Graduated from Rizal Elementary School in 2017.
+
+## Academic Achievements
+
+Finished second year with a GPA of 1.22 at PUP in 2025.
+
+Finished first year with a GPA of 1.19 at PUP in 2024.
+
+Graduated with High Honors from Senior High School in 2023.
+
+Graduated with Honors from Junior High School in 2021.
 
 ## Projects
 
-CodeCred is an online certification platform for programmers. Website: https://codecred.dev
+TEDxPUP Official Website is the official website for TEDx events organized by PUP students, built in 2026.
 
-BASE404 is an online coding bootcamp. Website: https://base-404.com
+AWS Cloud Club PUP Official Website is an all-in-one online platform for AWS Cloud Club PUP Manila, built in 2026.
 
-DIIN.PH is an AI-powered wardrobe assistant. Website: https://diin.ph
+Municipal Website of Atimonan, Quezon is an online portal that gives residents and visitors easy access to local services, news, emergency contacts, and community updates, built in 2025.
 
-DYNAMIS Workout Tracker is an AI-powered workout tracker. Website: https://dynamis-app.online
+SurroundSense is an Arduino-Python LiDAR Application for Real-Time Surrounding Mapping and Object Detection, built in 2025.
+
+Project Zero is a Job Listing Site to Take IT Professionals from Zero to Career Hero, built in 2025.
+
+Arduino-Based RFID System as an Efficient Tracker of the Students' Report Card instantly displays grades on an LCD screen and sends them via SMS to students and parents using a GSM module, built in 2023.
+
+Project Yú is an Arduino-Based Robot to Assist Fishermen in Detecting Fish Abundance, built in 2019.
+
+Project Talakinesis is an Arduino-Based Motion Activated Light Source for Energy Efficiency, built in 2019.
+
+Arduino-Based RFID Technology as an Efficient Way of Passport Verification speeds up passport verification by allowing passengers to tap their RFID-enabled passport and instantly display their information, built in 2019.
 
 ## Certifications
 
-Huawei Developer Expert from Huawei.
+National Certificate III in Visual Graphic Design from TESDA. Credential ID: 25130603070903.
 
-Generative AI Leader from Google.
-
-Software Engineering certification from TestDome.
-
-Generative AI Professional from Oracle.
+National Certificate II in Computer Systems Servicing from TESDA. Credential ID: 24131402021182.
 
 ## Awards And Recognition
 
-Bryl was recognized as DICT OpenGov Hackathon 2025 Champion.
+1st Place - Summer Sumo Games and Youth Robotics Competition 2019 - Robot in Movie (Senior Category).
 
-Bryl is part of StellarPH PH100, the annual list of the brightest minds under 30 in the Philippines.
+2nd Place - International Robot Olympiad Preliminary 2019 - Robot in Movie (Senior Category).
 
-Bryl is a founding member of DEVS ONE HUNDRED.
+3rd Place - FIRA Roboworldcup Philippine Open 2019 - Robot Rugby (U19).
 
-## Memberships
+4th Place - Division Science and Technology Fair 2019 - Science Innovation Expo (Team Category).
 
-Bryl is a member of the Analytics & Artificial Intelligence Association of the Philippines (AAP).
+2nd Place - International Robot Olympiad Pre-Event 2018 - Robot Farming (Intelligent Machines Contest).
 
-Bryl is a member of the Philippine Software Industry Association.
+2nd Place - MIBF Manufacturing Technology World 2018 - Robotics Competition - Color Sorting.
+
+3rd Place - Summer Sumo Games and Youth Robotics Competition 2018 - Robot in Movie (Senior Category).
 
 ## Contact And Links
 
-Email Bryl at bryllim@gmail.com.
+Email Geinel at geineldungao012@gmail.com.
 
-Schedule a consultation at https://calendly.com/bryllim/consultation.
+LinkedIn: https://www.linkedin.com/in/geineldungao/
 
-Read Bryl's blog at https://blog.bryllim.com.
-
-LinkedIn: https://linkedin.com/in/bryllim
-
-GitHub: https://github.com/bryllim
-
-Instagram: https://www.instagram.com/bryl.lim/
+Phone: 09288518944

@@ -152,7 +152,7 @@ h3 {
 }
 
 .role-row p {
-  white-space: nowrap;
+  white-space: normal;
 }
 
 .cta-row {
@@ -220,7 +220,7 @@ h3 {
 .experience li {
   position: relative;
   min-height: 39px;
-  padding-right: 34px;
+  padding-right: 0;
   margin-bottom: 17px;
 }
 
@@ -256,10 +256,8 @@ h3 {
 }
 
 .experience time {
-  position: absolute;
-  right: 0;
-  top: 20px;
-  color: var(--text);
+  color: var(--faint);
+  margin-top: 2px;
 }
 
 .section-head {
