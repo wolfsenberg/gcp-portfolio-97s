@@ -3,9 +3,9 @@ set -euo pipefail
 
 PROJECT_ID="${PROJECT_ID:-}"
 REGION="${REGION:-asia-southeast1}"
-SERVICE_NAME="${SERVICE_NAME:-bryl}"
+SERVICE_NAME="${SERVICE_NAME:-geinel}"
 BUCKET_NAME="${BUCKET_NAME:-}"
-ARTIFACT_REPO="${ARTIFACT_REPO:-bryllim}"
+ARTIFACT_REPO="${ARTIFACT_REPO:-geinel}"
 GEMINI_MODEL="${GEMINI_MODEL:-gemini-2.5-flash-lite}"
 SECRET_NAME="${SECRET_NAME:-gemini-api-key}"
 SKIP_ASSET_UPLOAD="${SKIP_ASSET_UPLOAD:-false}"
@@ -23,9 +23,9 @@ Usage:
 
 Optional:
   --region REGION                  Default: asia-southeast1
-  --service SERVICE_NAME            Default: bryl
-  --bucket BUCKET_NAME              Default: PROJECT_ID-bryllim-assets
-  --repo ARTIFACT_REPO              Default: bryllim
+  --service SERVICE_NAME            Default: geinel
+  --bucket BUCKET_NAME              Default: PROJECT_ID-geinel-assets
+  --repo ARTIFACT_REPO              Default: geinel
   --model GEMINI_MODEL              Default: gemini-2.5-flash-lite
   --secret SECRET_NAME              Default: gemini-api-key
   --skip-assets                     Skip Cloud Storage asset upload
@@ -91,7 +91,7 @@ if [[ -z "$PROJECT_ID" ]]; then
 fi
 
 if [[ -z "$BUCKET_NAME" ]]; then
-  BUCKET_NAME="${PROJECT_ID}-bryllim-assets"
+  BUCKET_NAME="${PROJECT_ID}-geinel-assets"
 fi
 
 if [[ -z "${GEMINI_API_KEY:-}" ]]; then
