@@ -14,7 +14,7 @@ const publicDir = path.join(__dirname, "public");
 const app = express();
 const port = process.env.PORT || 3005;
 const assetBaseUrl = (process.env.ASSET_BASE_URL || "/assets").replace(/\/$/, "");
-const geminiModel = process.env.GEMINI_MODEL || "gemini-2.5-flash-lite";
+const geminiModel = process.env.GEMINI_MODEL || "gemini-2.5-flash";
 const apiKey = process.env.GEMINI_API_KEY;
 const genAI = apiKey ? new GoogleGenAI({ apiKey }) : null;
 const assetBucketName = process.env.ASSET_BUCKET_NAME || process.env.BUCKET_NAME || "";
@@ -290,9 +290,6 @@ app.post("/api/chat", requireAllowedChatOrigin, chatLimiter, async (req, res) =>
       config: {
         temperature: 0.2,
         maxOutputTokens: 220,
-        thinkingConfig: {
-          thinkingBudget: 0
-        },
         safetySettings,
         systemInstruction:
           `You are the assistant for Geinel Niño A. Dungao's personal portfolio. Use only the Markdown knowledge base below as context.\n\nRules:\n- Answer naturally in 1-4 short sentences.\n- Only answer questions that are directly relevant to Geinel's portfolio, projects, skills, experience, and contact details.\n- If the visitor asks about anything else, politely refuse and say you only answer questions about Geinel's professional background.\n- If the visitor greets you, briefly say what you can answer about.\n- Do not invent facts. Do not mention implementation details.\n\nMarkdown knowledge base:\n${knowledge}`
@@ -302,7 +299,7 @@ app.post("/api/chat", requireAllowedChatOrigin, chatLimiter, async (req, res) =>
     res.json({ reply: response.text || "I could not answer that from the template notes." });
   } catch (error) {
     console.error("Gemini chat error", error);
-    res.status(500).json({ error: "Chat failed. Please try again." });
+    res.status(500).json({ error: `Chat failed: ${error.message}` });
   }
 });
 
