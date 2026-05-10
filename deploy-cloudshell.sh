@@ -6,7 +6,7 @@ REGION="${REGION:-asia-southeast1}"
 SERVICE_NAME="${SERVICE_NAME:-geinel}"
 BUCKET_NAME="${BUCKET_NAME:-}"
 ARTIFACT_REPO="${ARTIFACT_REPO:-geinel}"
-GEMINI_MODEL="${GEMINI_MODEL:-gemini-2.5-flash}"
+GEMINI_MODEL="${GEMINI_MODEL:-gemini-2.5-flash-lite}"
 SECRET_NAME="${SECRET_NAME:-gemini-api-key}"
 SKIP_ASSET_UPLOAD="${SKIP_ASSET_UPLOAD:-false}"
 GLOBAL_RATE_LIMIT="${GLOBAL_RATE_LIMIT:-500}"
@@ -26,7 +26,7 @@ Optional:
   --service SERVICE_NAME            Default: geinel
   --bucket BUCKET_NAME              Default: PROJECT_ID-geinel-assets
   --repo ARTIFACT_REPO              Default: geinel
-  --model GEMINI_MODEL              Default: gemini-2.5-flash
+  --model GEMINI_MODEL              Default: gemini-2.5-flash-lite
   --secret SECRET_NAME              Default: gemini-api-key
   --skip-assets                     Skip Cloud Storage asset upload
 
