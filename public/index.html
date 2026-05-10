@@ -8,7 +8,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <link rel="icon" href="/assets/profile-frames/frame-000.webp">
+  <link rel="icon" href="__ASSET_BASE_URL__/profile-frames/frame-000.webp">
+  <script>
+    window.ASSET_BASE = "__ASSET_BASE_URL__" !== "__ASSET_BASE_URL__" ? "__ASSET_BASE_URL__" : "/assets";
+  </script>
 </head>
 <body>
   
@@ -183,7 +186,7 @@
           <div style="padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--win-gray-light);">
             <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 12px;">
               <div style="width: 80px; height: 80px; flex-shrink: 0; border: 2px solid; border-color: var(--win-3d-dark) var(--win-3d-light) var(--win-3d-light) var(--win-3d-dark); overflow: hidden; background: var(--win-white);">
-                <img src="/assets/profile-frames/frame-000.webp" alt="Geinel Niño A. Dungao" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'" />
+                <img src="__ASSET_BASE_URL__/profile-frames/frame-000.webp" alt="Geinel Niño A. Dungao" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'" />
               </div>
               <div>
                 <h1 style="font-size: 22px; font-weight: bold; color: var(--win-blue); margin-bottom: 6px; line-height: 1.2;">

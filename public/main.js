@@ -121,6 +121,19 @@ document.addEventListener('DOMContentLoaded', () => {
     "rfid-passport": { "title": "Arduino-Based RFID Technology as an Efficient Way of Passport Verification", "year": "2019", "tech": ["Arduino", "C++"], "type": "Team Project (★ I lead this project)", "fullDescription": "This project introduces an Arduino-based RFID system that revolutionizes passport verification. With just a single tap of an RFID-enabled passport, a passenger's information instantly appears on the screen, eliminating the delays of manual checks.", "images": [] }
   };
 
+  const base = window.ASSET_BASE || "/assets";
+  Object.values(window.projectsData).forEach(project => {
+    if (project.images) {
+      project.images.forEach(img => {
+        if (img.src.startsWith("./")) {
+          img.src = img.src.replace("./", base + "/");
+        } else if (img.src.startsWith("/")) {
+          img.src = base + img.src;
+        }
+      });
+    }
+  });
+
   const contentTechRender = document.getElementById('content-technical');
   if (contentTechRender) {
     const projKeys = Object.keys(window.projectsData);
