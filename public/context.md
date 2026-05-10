@@ -104,6 +104,14 @@ National Certificate II in Computer Systems Servicing from TESDA. Credential ID:
 
 ## Awards And Recognition
 
+2nd Place - Google Developer Groups PUP: Build with AI Mini Hackathon in 2026.
+
+2nd Place - Zero to Agent Manila: Mini Hackathon in 2026.
+
+Top Builder - Build on Stellar Bootcamp Philippines in 2026.
+
+3rd Place - Arduino Day Philippines 2026: ArduInnovathon.
+
 1st Place - Summer Sumo Games and Youth Robotics Competition 2019 - Robot in Movie (Senior Category).
 
 2nd Place - International Robot Olympiad Preliminary 2019 - Robot in Movie (Senior Category).

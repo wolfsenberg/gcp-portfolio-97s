@@ -1,265 +1,707 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Geinel Niño A. Dungao - Portfolio</title>
-  <meta name="description" content="IT student, Full-Stack Web &amp; IoT Developer, and Cloud Computing enthusiast from Taguig City, Philippines." />
-  <meta name="author" content="Geinel Niño A. Dungao" />
-  <meta name="keywords"
-    content="Geinel Dungao, Portfolio, IoT Developer, Cloud Computing, Arduino, Python, JavaScript, React, Next.js, AWS, PUP, Taguig" />
-  <meta name="robots" content="index, follow" />
-  <meta property="og:title" content="Geinel Niño A. Dungao - Portfolio" />
-  <meta property="og:description"
-    content="IT student, Full-Stack Web &amp; IoT Developer, and Cloud Computing enthusiast from Taguig City, Philippines." />
-  <meta property="og:url" content="https://example.com/" />
-  <meta property="og:site_name" content="Geinel Niño A. Dungao - Portfolio" />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="__ASSET_BASE_URL__/profile-frames/frame-000.webp" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:creator" content="@geineldungao" />
-  <meta name="twitter:title" content="Geinel Niño A. Dungao - Portfolio" />
-  <meta name="twitter:description"
-    content="IT student, Full-Stack Web &amp; IoT Developer, and Cloud Computing enthusiast from Taguig City, Philippines." />
-  <meta name="twitter:image" content="__ASSET_BASE_URL__/profile-frames/frame-000.webp" />
-  <link rel="icon" href="__ASSET_BASE_URL__/profile-frames/frame-000.webp" type="image/webp" />
-  <link rel="apple-touch-icon" href="__ASSET_BASE_URL__/profile-frames/frame-000.webp" sizes="180x180" />
-  <link rel="stylesheet" href="/styles.css" />
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script nonce="__CSP_NONCE__">
-    tailwind.config = {
-      corePlugins: {
-        preflight: false,
-      },
-      darkMode: 'class',
-      theme: {
-        extend: {
-          colors: {
-            accent: {
-              DEFAULT: '#36518f',
-              strong: '#243a69',
-            },
-          }
-        }
-      }
-    }
-  </script>
-  <script nonce="__CSP_NONCE__">
-    document.documentElement.classList.toggle("dark", localStorage.getItem("theme") === "dark");
-  </script>
-  <script type="application/ld+json" nonce="__CSP_NONCE__">
-      {
-        "@context": "https://schema.org",
-        "@graph": [
-          {
-            "@type": "Person",
-            "@id": "https://example.com/#person",
-            "name": "Geinel Niño A. Dungao",
-            "jobTitle": "Full-Stack Web & IoT Developer",
-            "description": "IT student, Full-Stack Web & IoT Developer, and Cloud Computing enthusiast from Taguig City, Philippines.",
-            "image": "https://example.com/profile.webp",
-            "sameAs": ["https://www.linkedin.com/in/geineldungao/"]
-          },
-          {
-            "@type": "WebSite",
-            "@id": "https://example.com/#website",
-            "url": "https://example.com",
-            "name": "Geinel Niño A. Dungao - Portfolio",
-            "publisher": { "@id": "https://example.com/#person" }
-          }
-        ]
-      }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geinel's Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Reddit+Mono:wght@200..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="/assets/profile-frames/frame-000.webp">
 </head>
-
 <body>
-  <main class="page">
-    <section class="intro">
-      <img class="portrait asset" data-asset="profile-frames/frame-000.webp" alt="Geinel Niño A. Dungao" width="160"
-        height="160" />
-      <div class="intro-copy">
-        <div class="name-row">
-          <h1>Geinel Niño A. Dungao</h1>
-          <button class="theme-toggle" type="button" aria-label="Toggle theme"><span></span></button>
-        </div>
-        <p class="location">Taguig City, Philippines</p>
-        <div class="role-row">
-          <p>IT Student | Full-Stack Web & IoT Developer | TPM @ AWSCCPUP | Creatives @ AWSUG e:Novators PH |<br>Compliance Analyst, Cloud Solutions @ GDGPUP | Former Member of Taguig Robotics Team</p>
-        </div>
-        <nav class="flex flex-col sm:flex-row gap-3 mt-5" aria-label="Primary">
-          <a class="flex items-center justify-center gap-2 px-6 py-3 bg-accent text-white rounded-xl font-bold transition-all duration-300 hover:bg-accent-strong hover:-translate-y-0.5 shadow-md hover:shadow-lg"
-            href="https://www.linkedin.com/in/geineldungao/" target="_blank" rel="noreferrer"><svg class="w-4 h-4" fill="currentColor"
-              viewBox="0 0 24 24" aria-hidden="true">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
-              </path>
-            </svg> Connect on LinkedIn</a>
-          <a class="flex items-center justify-center gap-2 px-6 py-3 bg-transparent text-accent dark:text-white border border-accent/20 dark:border-white/20 rounded-xl font-bold transition-all duration-300 hover:bg-accent/5 dark:hover:bg-white/5 hover:-translate-y-0.5"
-            href="mailto:geineldungao012@gmail.com"><svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-                d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z">
-              </path>
-            </svg> Send Email</a>
-        </nav>
+  
+  <!-- Preloader -->
+  <div id="preloader" style="position: fixed; inset: 0; z-index: 10000; background: var(--win-teal); display: flex; align-items: center; justify-content: center; transition: opacity 0.3s ease;">
+    <div style="background: var(--win-gray); border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light); padding: 20px; text-align: center; font-family: monospace; font-size: 14px;">
+      <div style="margin-bottom: 10px; font-weight: bold;">Loading Portfolio...</div>
+      <div style="width: 200px; height: 16px; background: var(--win-white); border: 1px solid var(--win-3d-dark); margin: 0 auto; position: relative;">
+        <div style="width: 100%; height: 100%; background: var(--win-blue); animation: load 2s linear forwards;"></div>
       </div>
-    </section>
-
-    <div class="content-grid">
-      <section class="about">
-        <h2>About</h2>
-        <p>
-          I'm an Information Technology student at the Polytechnic University of the Philippines specializing in Full-Stack Web and IoT development. I actively lead and contribute to cloud computing communities across AWS, Google, and Microsoft ecosystems.
-        </p>
-        <p>
-          With a background rooted in competitive robotics, I bring a hands-on, problem-solving mindset to everything I build, from Arduino-based hardware systems to cloud-deployed web applications.
-        </p>
-        <p>
-          My current focus is IoT development and cloud solutions, bridging the gap between hardware and software to create practical, real-world applications.
-        </p>
-      </section>
-
-      <aside class="side-rail">
-        <section class="experience">
-          <h2>Experience</h2>
-          <ol>
-            <li class="active"><b>Full-Stack Web &amp; IoT Developer Intern</b><span>Cornersteel Systems Corporation</span><time>Present</time></li>
-            <li class="active"><b>Technical Project Manager - DevTeam</b><span>AWS Cloud Club PUP</span><time>Present</time></li>
-            <li class="active"><b>Cloud Solutions Team - Compliance Analyst</b><span>Google Developer Groups on Campus PUP</span><time>Present</time></li>
-            <li class="active"><b>Creatives - Office of Creative Services</b><span>AWS User Group e:Novators Philippines</span><time>Present</time></li>
-            <li class="active"><b>Cloud Computing Department</b><span>PUP Manila Microsoft Student Community</span><time>Present</time></li>
-            <li class="active"><b>Information Technology Student</b><span>Polytechnic University of the Philippines</span><time>Present</time></li>
-            <li><b>Robotics Competitor &amp; Researcher</b><span>Taguig Robotics Team</span><time>2017 - 2020</time></li>
-          </ol>
-        </section>
-      </aside>
-
-      <section class="stack">
-        <div class="section-head">
-          <h2>Skills</h2>
-        </div>
-        <h3>Technical &amp; Programming</h3>
-        <div class="tags">
-          <span>Arduino</span><span>C</span><span>C++</span><span>Java</span><span>Python</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Next.js</span><span>SQL</span><span>Laravel</span><span>Tailwind CSS</span><span>Google Apps Script</span><span>Prompt Engineering</span><span>Robotics (Hardware &amp; Software)</span><span>Research</span>
-        </div>
-        <h3>IT &amp; Networking</h3>
-        <div class="tags">
-          <span>Project Management</span><span>AWS Cloud</span><span>Network Administration</span><span>Windows Server</span><span>Computer Networking</span><span>Hardware Assembly</span><span>Installation</span><span>Maintenance</span><span>Troubleshooting</span>
-        </div>
-        <h3>Multimedia &amp; Design</h3>
-        <div class="tags"><span>Photography</span><span>Videography</span><span>Photo Editing</span><span>Video Editing</span></div>
-        <h3>Social Media &amp; Communication</h3>
-        <div class="tags"><span>Social Media Management</span><span>Content Strategy</span></div>
-        <h3>Languages</h3>
-        <div class="tags"><span>English</span><span>Filipino</span></div>
-      </section>
-
-      <section class="projects">
-        <div class="section-head">
-          <h2>Projects</h2>
-        </div>
-        <div class="card-grid">
-          <a href="#" target="_blank" rel="noreferrer"><b>TEDxPUP Official Website</b><span>Official website for TEDx events organized by PUP students</span><code>2026</code></a>
-          <a href="#" target="_blank" rel="noreferrer"><b>AWS Cloud Club PUP Official Website</b><span>An all-in-one online platform for AWS Cloud Club PUP Manila</span><code>2026</code></a>
-          <a href="#" target="_blank" rel="noreferrer"><b>Municipal Website of Atimonan, Quezon</b><span>An online portal that gives residents and visitors of Atimonan, Quezon easy access to local services, news, announcements, emergency contacts, community updates, and more</span><code>2025</code></a>
-          <a href="#" target="_blank" rel="noreferrer"><b>SurroundSense</b><span>An Arduino-Python LiDAR Application for Real-Time Surrounding Mapping and Object Detection</span><code>2025</code></a>
-          <a href="#" target="_blank" rel="noreferrer"><b>Project Zero</b><span>A Job Listing Site to Take IT Professionals from Zero to Career Hero</span><code>2025</code></a>
-          <a href="#" target="_blank" rel="noreferrer"><b>Arduino-Based RFID System as an Efficient Tracker of the Students' Report Card</b><span>An Arduino-based RFID system that instantly displays students' grades on an LCD screen and sends them via SMS to both students and parents using a GSM module</span><code>2023</code></a>
-          <a href="#" target="_blank" rel="noreferrer"><b>Project Y&uacute;</b><span>An Arduino-Based Robot to Assist Fishermen in Detecting Fish Abundance</span><code>2019</code></a>
-          <a href="#" target="_blank" rel="noreferrer"><b>Project Talakinesis</b><span>An Arduino-Based Motion Activated Light Source for Energy Efficiency</span><code>2019</code></a>
-          <a href="#" target="_blank" rel="noreferrer"><b>Arduino-Based RFID Technology as an Efficient Way of Passport Verification</b><span>An Arduino-based RFID system that speeds up passport verification by allowing passengers to tap their RFID-enabled passport and instantly display their information</span><code>2019</code></a>
-        </div>
-      </section>
-
-      <section class="certs">
-        <div class="section-head">
-          <h2>Certifications</h2>
-        </div>
-        <a href="#" target="_blank" rel="noreferrer"><b>National Certificate III in Visual Graphic Design</b><span>TESDA · Credential ID 25130603070903</span></a>
-        <a href="#" target="_blank" rel="noreferrer"><b>National Certificate II in Computer Systems Servicing</b><span>TESDA · Credential ID 24131402021182</span></a>
-      </section>
     </div>
+  </div>
+  <style>@keyframes load { from { width: 0%; } to { width: 100%; } }</style>
 
-    <section class="link-panels">
-      <div>
-        <p>A member of</p>
-        <div class="flex flex-col gap-2 mt-2">
-          <a href="https://www.facebook.com/AWSCloudClubPUP" target="_blank" rel="noreferrer" class="hover:text-accent transition-colors">AWS Cloud Club PUP Manila ↗</a>
-          <a href="https://www.facebook.com/gdg.pupmnl" target="_blank" rel="noreferrer" class="hover:text-accent transition-colors">Google Developer Groups on Campus PUP ↗</a>
-          <a href="https://www.facebook.com/PUPMSC" target="_blank" rel="noreferrer" class="hover:text-accent transition-colors">PUP Manila Microsoft Student Community ↗</a>
-          <a href="https://www.facebook.com/awsugenovatorsph" target="_blank" rel="noreferrer" class="hover:text-accent transition-colors">AWS User Group e:Novators Philippines ↗</a>
-        </div>
+  <!-- Desktop Icons (Navbar) -->
+  <div id="desktop-icons" style="position: fixed; top: 24px; left: 8px; z-index: 100; display: flex; flex-direction: column; gap: 6px; max-height: calc(100vh - 60px); overflow-y: auto; overflow-x: hidden; padding: 4px; width: 80px;">
+    
+    <a href="#home" class="win-icon">
+      <div style="width: 40px; height: 40px; background: var(--win-gray); border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light); display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 24 24" width="24" height="24" style="image-rendering: pixelated; display: block; flex-shrink: 0"><rect x="8" y="2" width="8" height="7" fill="#008080"/><rect x="9" y="3" width="6" height="2" fill="#00AAAA"/><rect x="4" y="11" width="16" height="11" fill="#C0C0C0"/><rect x="4" y="11" width="16" height="2" fill="#DFDFDF"/><rect x="4" y="11" width="2" height="11" fill="#DFDFDF"/><rect x="18" y="11" width="2" height="11" fill="#808080"/><rect x="4" y="20" width="16" height="2" fill="#808080"/></svg>
       </div>
-      <div>
-        <p>Social Links</p>
-        <div class="flex flex-col gap-3 mt-2">
-          <a href="https://www.linkedin.com/in/geineldungao/" target="_blank" rel="noreferrer"
-            class="flex items-center gap-2.5 hover:text-accent transition-colors"><svg class="w-4 h-4 opacity-80" fill="currentColor" viewBox="0 0 24 24"
-              aria-hidden="true">
-              <path
-                d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z">
-              </path>
-            </svg> LinkedIn</a>
-        </div>
-        <div class="flex flex-col gap-2 mt-4 sm:mt-0">
-          <a class="group p-2.5 rounded-md bg-black/[0.03] dark:bg-white/[0.03] hover:bg-black/[0.06] dark:hover:bg-white/[0.06] border border-black/[0.03] dark:border-white/[0.03] transition-all duration-200 block" href="mailto:geineldungao012@gmail.com">
-            <div class="flex items-center gap-1.5 mb-1 opacity-60">
-              <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
-              <p class="text-[9px] font-bold uppercase tracking-wider leading-none">Email</p>
-            </div>
-            <p class="text-[11px] font-semibold group-hover:text-accent transition-colors leading-none">geineldungao012@gmail.com</p>
-          </a>
-          <a class="group p-2.5 rounded-md bg-black/[0.03] dark:bg-white/[0.03] hover:bg-black/[0.06] dark:hover:bg-white/[0.06] border border-black/[0.03] dark:border-white/[0.03] transition-all duration-200 block" href="https://www.linkedin.com/in/geineldungao/" target="_blank" rel="noreferrer">
-            <div class="flex items-center gap-1.5 mb-1 opacity-60">
-              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"></path></svg>
-              <p class="text-[9px] font-bold uppercase tracking-wider leading-none">Connect</p>
-            </div>
-            <div class="flex items-center justify-between leading-none">
-              <span class="text-[11px] font-semibold group-hover:text-accent transition-colors">View LinkedIn Profile</span>
-              <svg class="w-3 h-3 group-hover:text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 5l7 7-7 7"></path></svg>
-            </div>
-          </a>
-        </div>
+      <div class="win-icon-label">About Me</div>
+    </a>
+    
+    <a href="#experience" class="win-icon">
+      <div style="width: 40px; height: 40px; background: var(--win-gray); border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light); display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 24 24" width="24" height="24" style="image-rendering: pixelated; display: block; flex-shrink: 0"><rect x="8" y="3" width="8" height="3" fill="#808080"/><rect x="9" y="3" width="6" height="2" fill="#C0C0C0"/><rect x="2" y="6" width="20" height="14" fill="#FFCC00"/><rect x="2" y="6" width="20" height="2" fill="#FFE066"/><rect x="2" y="6" width="2" height="14" fill="#FFE066"/><rect x="20" y="6" width="2" height="14" fill="#AA8800"/><rect x="2" y="18" width="20" height="2" fill="#AA8800"/><rect x="2" y="12" width="20" height="2" fill="#AA8800"/><rect x="10" y="10" width="4" height="4" fill="#C0C0C0"/></svg>
       </div>
-    </section>
+      <div class="win-icon-label">Experience</div>
+    </a>
+    
+    <a href="#projects" class="win-icon">
+      <div style="width: 40px; height: 40px; background: var(--win-gray); border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light); display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 24 24" width="24" height="24" style="image-rendering: pixelated; display: block; flex-shrink: 0"><rect x="1" y="7" width="8" height="3" fill="#FFCC00"/><rect x="1" y="9" width="22" height="13" fill="#FFCC00"/><rect x="1" y="9" width="22" height="2" fill="#FFE566"/><rect x="1" y="9" width="2" height="13" fill="#FFE566"/><rect x="21" y="9" width="2" height="13" fill="#AA8800"/><rect x="1" y="20" width="22" height="2" fill="#AA8800"/></svg>
+      </div>
+      <div class="win-icon-label">Projects</div>
+    </a>
+    
+    <a href="#education" class="win-icon">
+      <div style="width: 40px; height: 40px; background: var(--win-gray); border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light); display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 24 24" width="24" height="24" style="image-rendering: pixelated; display: block; flex-shrink: 0"><polygon points="12,3 22,8 12,13 2,8" fill="#008080"/><polygon points="12,3 22,8 12,13 2,8" fill="none" stroke="#00AAAA" stroke-width="1"/><rect x="19" y="8" width="2" height="7" fill="#808080"/><rect x="18" y="15" width="3" height="2" fill="#808080"/><rect x="7" y="13" width="10" height="6" fill="#008080"/><rect x="7" y="13" width="10" height="2" fill="#00AAAA"/></svg>
+      </div>
+      <div class="win-icon-label">Education</div>
+    </a>
+    
+    <a href="#skills" class="win-icon">
+      <div style="width: 40px; height: 40px; background: var(--win-gray); border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light); display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 24 24" width="24" height="24" style="image-rendering: pixelated; display: block; flex-shrink: 0"><rect x="9" y="1" width="6" height="4" fill="#008080"/><rect x="9" y="19" width="6" height="4" fill="#008080"/><rect x="1" y="9" width="4" height="6" fill="#008080"/><rect x="19" y="9" width="4" height="6" fill="#008080"/><rect x="5" y="5" width="14" height="14" fill="#008080"/><rect x="5" y="5" width="14" height="2" fill="#00AAAA"/><rect x="5" y="5" width="2" height="14" fill="#00AAAA"/><rect x="17" y="5" width="2" height="14" fill="#005555"/><rect x="5" y="17" width="14" height="2" fill="#005555"/><rect x="8" y="8" width="8" height="8" fill="#C0C0C0"/><rect x="8" y="8" width="8" height="2" fill="#DFDFDF"/></svg>
+      </div>
+      <div class="win-icon-label">Skills</div>
+    </a>
+    
+    <a href="#achievements" class="win-icon">
+      <div style="width: 40px; height: 40px; background: var(--win-gray); border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light); display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 24 24" width="24" height="24" style="image-rendering: pixelated; display: block; flex-shrink: 0"><rect x="7" y="2" width="10" height="9" fill="#FFCC00"/><rect x="7" y="2" width="10" height="2" fill="#FFE566"/><rect x="7" y="2" width="2" height="9" fill="#FFE566"/><rect x="15" y="2" width="2" height="9" fill="#AA8800"/><rect x="3" y="2" width="4" height="6" fill="#FFCC00"/><rect x="17" y="2" width="4" height="6" fill="#FFCC00"/><rect x="10" y="11" width="4" height="4" fill="#C0C0C0"/><rect x="6" y="15" width="12" height="3" fill="#C0C0C0"/><rect x="6" y="15" width="12" height="1" fill="#DFDFDF"/></svg>
+      </div>
+      <div class="win-icon-label">Achievements</div>
+    </a>
+    
+    <a href="#certifications" class="win-icon">
+      <div style="width: 40px; height: 40px; background: var(--win-gray); border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light); display: flex; align-items: center; justify-content: center;">
+        <svg viewBox="0 0 24 24" width="24" height="24" style="image-rendering: pixelated; display: block; flex-shrink: 0"><rect x="3" y="1" width="14" height="22" fill="#FFFFFF"/><rect x="3" y="1" width="14" height="1" fill="#DFDFDF"/><rect x="3" y="1" width="1" height="22" fill="#DFDFDF"/><rect x="15" y="1" width="2" height="22" fill="#808080"/><rect x="3" y="21" width="14" height="2" fill="#808080"/><rect x="13" y="1" width="4" height="4" fill="#C0C0C0"/><rect x="13" y="1" width="1" height="4" fill="#808080"/><rect x="13" y="4" width="4" height="1" fill="#808080"/><rect x="6" y="7" width="8" height="1" fill="#000080"/><rect x="6" y="10" width="7" height="1" fill="#000080"/><rect x="6" y="13" width="8" height="1" fill="#000080"/><rect x="6" y="16" width="5" height="1" fill="#000080"/></svg>
+      </div>
+      <div class="win-icon-label">Certifications</div>
+    </a>
+  </div>
 
-    <section class="gallery">
-      <h2>Gallery</h2>
-      <div class="gallery-shell">
-        <button class="gallery-prev" type="button" aria-label="Previous image">‹</button>
-        <div class="gallery-track" id="gallery-track"></div>
-        <button class="gallery-next" type="button" aria-label="Next image">›</button>
+  <!-- Start Menu -->
+  <div id="start-menu-overlay" class="start-menu-overlay"></div>
+  <div id="start-menu" class="win-window start-menu">
+    <div class="win-titlebar"><span style="font-weight: bold;">Geinel Niño A. Dungao</span></div>
+    <div style="display: flex; background: var(--win-gray);">
+      <div style="width: 30px; background: linear-gradient(180deg, var(--win-blue) 0%, var(--win-teal) 100%); display: flex; align-items: flex-end; padding: 8px 4px; flex-shrink: 0;">
+        <div style="writing-mode: vertical-rl; transform: rotate(180deg); color: var(--win-white); font-weight: bold; font-size: 13px; letter-spacing: 2px;">Portfolio</div>
       </div>
-    </section>
+      <div style="flex: 1;">
+        <a href="#home" class="start-menu-link" style="display: flex; align-items: center; gap: 10px; padding: 7px 12px; text-decoration: none; color: var(--win-black); border-bottom: 1px solid var(--win-gray-light); font-size: 11px;">
+          <div style="width: 20px; height: 20px; flex-shrink: 0;">
+            <svg viewBox="0 0 24 24" width="20" height="20" style="image-rendering: pixelated;"><rect x="8" y="2" width="8" height="7" fill="#008080"/><rect x="9" y="3" width="6" height="2" fill="#00AAAA"/><rect x="4" y="11" width="16" height="11" fill="#C0C0C0"/><rect x="4" y="11" width="16" height="2" fill="#DFDFDF"/><rect x="4" y="11" width="2" height="11" fill="#DFDFDF"/><rect x="18" y="11" width="2" height="11" fill="#808080"/><rect x="4" y="20" width="16" height="2" fill="#808080"/></svg>
+          </div>
+          <span>About Me</span>
+        </a>
+        <a href="#experience" class="start-menu-link" style="display: flex; align-items: center; gap: 10px; padding: 7px 12px; text-decoration: none; color: var(--win-black); border-bottom: 1px solid var(--win-gray-light); font-size: 11px;">
+          <div style="width: 20px; height: 20px; flex-shrink: 0;">
+            <svg viewBox="0 0 24 24" width="20" height="20" style="image-rendering: pixelated;"><rect x="8" y="3" width="8" height="3" fill="#808080"/><rect x="9" y="3" width="6" height="2" fill="#C0C0C0"/><rect x="2" y="6" width="20" height="14" fill="#FFCC00"/><rect x="2" y="6" width="20" height="2" fill="#FFE066"/><rect x="2" y="6" width="2" height="14" fill="#FFE066"/><rect x="20" y="6" width="2" height="14" fill="#AA8800"/><rect x="2" y="18" width="20" height="2" fill="#AA8800"/><rect x="2" y="12" width="20" height="2" fill="#AA8800"/><rect x="10" y="10" width="4" height="4" fill="#C0C0C0"/></svg>
+          </div>
+          <span>Experience</span>
+        </a>
+        <a href="#projects" class="start-menu-link" style="display: flex; align-items: center; gap: 10px; padding: 7px 12px; text-decoration: none; color: var(--win-black); border-bottom: 1px solid var(--win-gray-light); font-size: 11px;">
+          <div style="width: 20px; height: 20px; flex-shrink: 0;">
+            <svg viewBox="0 0 24 24" width="20" height="20" style="image-rendering: pixelated;"><rect x="1" y="7" width="8" height="3" fill="#FFCC00"/><rect x="1" y="9" width="22" height="13" fill="#FFCC00"/><rect x="1" y="9" width="22" height="2" fill="#FFE566"/><rect x="1" y="9" width="2" height="13" fill="#FFE566"/><rect x="21" y="9" width="2" height="13" fill="#AA8800"/><rect x="1" y="20" width="22" height="2" fill="#AA8800"/></svg>
+          </div>
+          <span>Projects</span>
+        </a>
+        <a href="#education" class="start-menu-link" style="display: flex; align-items: center; gap: 10px; padding: 7px 12px; text-decoration: none; color: var(--win-black); border-bottom: 1px solid var(--win-gray-light); font-size: 11px;">
+          <div style="width: 20px; height: 20px; flex-shrink: 0;">
+            <svg viewBox="0 0 24 24" width="20" height="20" style="image-rendering: pixelated;"><polygon points="12,3 22,8 12,13 2,8" fill="#008080"/><polygon points="12,3 22,8 12,13 2,8" fill="none" stroke="#00AAAA" stroke-width="1"/><rect x="19" y="8" width="2" height="7" fill="#808080"/><rect x="18" y="15" width="3" height="2" fill="#808080"/><rect x="7" y="13" width="10" height="6" fill="#008080"/><rect x="7" y="13" width="10" height="2" fill="#00AAAA"/></svg>
+          </div>
+          <span>Education</span>
+        </a>
+        <a href="#skills" class="start-menu-link" style="display: flex; align-items: center; gap: 10px; padding: 7px 12px; text-decoration: none; color: var(--win-black); border-bottom: 1px solid var(--win-gray-light); font-size: 11px;">
+          <div style="width: 20px; height: 20px; flex-shrink: 0;">
+             <svg viewBox="0 0 24 24" width="20" height="20" style="image-rendering: pixelated;"><rect x="9" y="1" width="6" height="4" fill="#008080"/><rect x="9" y="19" width="6" height="4" fill="#008080"/><rect x="1" y="9" width="4" height="6" fill="#008080"/><rect x="19" y="9" width="4" height="6" fill="#008080"/><rect x="5" y="5" width="14" height="14" fill="#008080"/><rect x="5" y="5" width="14" height="2" fill="#00AAAA"/><rect x="5" y="5" width="2" height="14" fill="#00AAAA"/><rect x="17" y="5" width="2" height="14" fill="#005555"/><rect x="5" y="17" width="14" height="2" fill="#005555"/><rect x="8" y="8" width="8" height="8" fill="#C0C0C0"/><rect x="8" y="8" width="8" height="2" fill="#DFDFDF"/></svg>
+          </div>
+          <span>Skills</span>
+        </a>
+        <a href="#achievements" class="start-menu-link" style="display: flex; align-items: center; gap: 10px; padding: 7px 12px; text-decoration: none; color: var(--win-black); border-bottom: 1px solid var(--win-gray-light); font-size: 11px;">
+          <div style="width: 20px; height: 20px; flex-shrink: 0;">
+            <svg viewBox="0 0 24 24" width="20" height="20" style="image-rendering: pixelated;"><rect x="7" y="2" width="10" height="9" fill="#FFCC00"/><rect x="7" y="2" width="10" height="2" fill="#FFE566"/><rect x="7" y="2" width="2" height="9" fill="#FFE566"/><rect x="15" y="2" width="2" height="9" fill="#AA8800"/><rect x="3" y="2" width="4" height="6" fill="#FFCC00"/><rect x="17" y="2" width="4" height="6" fill="#FFCC00"/><rect x="10" y="11" width="4" height="4" fill="#C0C0C0"/><rect x="6" y="15" width="12" height="3" fill="#C0C0C0"/><rect x="6" y="15" width="12" height="1" fill="#DFDFDF"/></svg>
+          </div>
+          <span>Achievements</span>
+        </a>
+        <a href="#certifications" class="start-menu-link" style="display: flex; align-items: center; gap: 10px; padding: 7px 12px; text-decoration: none; color: var(--win-black); border-bottom: 1px solid var(--win-gray-light); font-size: 11px;">
+          <div style="width: 20px; height: 20px; flex-shrink: 0;">
+            <svg viewBox="0 0 24 24" width="20" height="20" style="image-rendering: pixelated;"><rect x="3" y="1" width="14" height="22" fill="#FFFFFF"/><rect x="3" y="1" width="14" height="1" fill="#DFDFDF"/><rect x="3" y="1" width="1" height="22" fill="#DFDFDF"/><rect x="15" y="1" width="2" height="22" fill="#808080"/><rect x="3" y="21" width="14" height="2" fill="#808080"/><rect x="13" y="1" width="4" height="4" fill="#C0C0C0"/><rect x="13" y="1" width="1" height="4" fill="#808080"/><rect x="13" y="4" width="4" height="1" fill="#808080"/><rect x="6" y="7" width="8" height="1" fill="#000080"/><rect x="6" y="10" width="7" height="1" fill="#000080"/><rect x="6" y="13" width="8" height="1" fill="#000080"/><rect x="6" y="16" width="5" height="1" fill="#000080"/></svg>
+          </div>
+          <span>Certifications</span>
+        </a>
+
+        <div style="border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 4px 0;"></div>
+
+        <a href="https://www.facebook.com/gein3ru" target="_blank" class="start-menu-link" style="display: flex; align-items: center; gap: 10px; padding: 8px 12px; text-decoration: none; color: var(--win-black); border-bottom: 1px solid var(--win-gray-light); font-size: 11px; font-weight: bold;">
+          <svg viewBox="0 0 32 32" width="20" height="20" style="image-rendering: pixelated; flex-shrink: 0;"><rect x="2" y="2" width="28" height="28" fill="#1877F2"/><rect x="18" y="8" width="6" height="3" fill="#FFFFFF"/><rect x="14" y="7" width="4" height="18" fill="#FFFFFF"/><rect x="14" y="16" width="8" height="3" fill="#FFFFFF"/></svg>
+          Facebook
+        </a>
+        <a href="https://www.instagram.com/_geineru/" target="_blank" class="start-menu-link" style="display: flex; align-items: center; gap: 10px; padding: 8px 12px; text-decoration: none; color: var(--win-black); border-bottom: 1px solid var(--win-gray-light); font-size: 11px; font-weight: bold;">
+          <svg viewBox="0 0 32 32" width="20" height="20" style="image-rendering: pixelated; flex-shrink: 0;"><rect x="2" y="2" width="28" height="28" fill="#E1306C"/><rect x="8" y="8" width="16" height="16" fill="none" stroke="#FFFFFF" stroke-width="2"/><rect x="12" y="12" width="8" height="8" fill="none" stroke="#FFFFFF" stroke-width="2"/><rect x="20" y="6" width="4" height="4" fill="#FFFFFF"/></svg>
+          Instagram
+        </a>
+        <a href="https://www.linkedin.com/in/geineldungao/" target="_blank" class="start-menu-link" style="display: flex; align-items: center; gap: 10px; padding: 8px 12px; text-decoration: none; color: var(--win-black); border-bottom: 1px solid var(--win-gray-light); font-size: 11px; font-weight: bold;">
+          <svg viewBox="0 0 32 32" width="20" height="20" style="image-rendering: pixelated; flex-shrink: 0;"><rect x="2" y="2" width="28" height="28" fill="#0077B5"/><rect x="6" y="12" width="5" height="14" fill="#FFFFFF"/><rect x="6" y="6" width="5" height="5" fill="#FFFFFF"/><rect x="14" y="12" width="5" height="14" fill="#FFFFFF"/><rect x="14" y="14" width="8" height="5" fill="#FFFFFF"/><rect x="19" y="12" width="5" height="5" fill="#FFFFFF"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/wolfsenberg" target="_blank" class="start-menu-link" style="display: flex; align-items: center; gap: 10px; padding: 8px 12px; text-decoration: none; color: var(--win-black); font-size: 11px; font-weight: bold;">
+          <svg viewBox="0 0 32 32" width="20" height="20" style="image-rendering: pixelated; flex-shrink: 0;"><rect x="2" y="2" width="28" height="28" fill="#24292E"/><rect x="9" y="6" width="14" height="2" fill="#FFFFFF"/><rect x="6" y="8" width="20" height="2" fill="#FFFFFF"/><rect x="5" y="10" width="22" height="10" fill="#FFFFFF"/><rect x="6" y="20" width="8" height="6" fill="#FFFFFF"/><rect x="18" y="20" width="8" height="6" fill="#FFFFFF"/><rect x="13" y="22" width="6" height="4" fill="#24292E"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Win97 Ticker -->
+  <div style="position: fixed; top: 0; left: 0; right: 0; height: 20px; background: var(--win-gray); border-bottom: 2px solid; border-color: var(--win-3d-dark) var(--win-3d-light) var(--win-3d-light) var(--win-3d-dark); overflow: hidden; z-index: 200; display: flex; align-items: center;">
+    <div style="flex: 1; overflow: hidden; position: relative;">
+      <div style="display: inline-block; white-space: nowrap; font-size: 10px; animation: win-ticker 40s linear infinite; padding-left: 100%;">
+        Welcome to my portfolio ^___^ &nbsp;|&nbsp; Geinel Niño A. Dungao &nbsp;|&nbsp; IT Student &nbsp;|&nbsp; Full-Stack Web &amp; IoT Developer &nbsp;|&nbsp; Technical Project Manager @ AWSCCPUP &nbsp;|&nbsp; Creatives @ AWSUG e:Novators PH &nbsp;|&nbsp; Compliance Analyst, Cloud Solutions @ GDGPUP &nbsp;|&nbsp; 14°31′52″N 121°03′13″E &nbsp;|&nbsp; 14°35′50″N, 121°0′39″E &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content Area -->
+  <main id="main-content" style="padding: 44px 20px 80px 100px; display: flex; flex-direction: column; gap: 20px; align-items: center;">
+    <div style="width: 100%; max-width: 860px; display: flex; flex-direction: column; gap: 20px;">
+
+      <!-- 1. ABOUT ME -->
+      <div id="home" class="win-window fade-in" style="scroll-margin-top: 8px;">
+        <div class="win-titlebar">
+          <span>About Me — GEINEL NIÑO DUNGAO</span>
+          <div style="display: flex; gap: 2px;">
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">_</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 7px;">□</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">x</button>
+          </div>
+        </div>
+        <div class="win-menubar">
+          <div class="win-menu-item"><u>F</u>ile</div>
+          <div class="win-menu-item"><u>E</u>dit</div>
+          <div class="win-menu-item"><u>V</u>iew</div>
+          <div class="win-menu-item"><u>H</u>elp</div>
+        </div>
+        <div style="background: var(--win-white); margin: 8px; padding: 20px;">
+          <div style="padding-bottom: 16px; margin-bottom: 16px; border-bottom: 1px solid var(--win-gray-light);">
+            <div style="display: flex; align-items: flex-start; gap: 16px; margin-bottom: 12px;">
+              <div style="width: 80px; height: 80px; flex-shrink: 0; border: 2px solid; border-color: var(--win-3d-dark) var(--win-3d-light) var(--win-3d-light) var(--win-3d-dark); overflow: hidden; background: var(--win-white);">
+                <img src="/assets/profile-frames/frame-000.webp" alt="Geinel Niño A. Dungao" style="width: 100%; height: 100%; object-fit: cover;" onerror="this.style.display='none'" />
+              </div>
+              <div>
+                <h1 style="font-size: 22px; font-weight: bold; color: var(--win-blue); margin-bottom: 6px; line-height: 1.2;">
+                  GEINEL NIÑO A. DUNGAO
+                </h1>
+                <p style="font-size: 12px; margin-bottom: 4px; line-height: 1.5;">IT Student | Full-Stack Web & IoT Developer | Technical Project Manager @ AWSCCPUP | Creatives @ AWSUG e:Novators PH | Compliance Analyst, Cloud Solutions @ GDGPUP</p>
+                <p style="font-size: 11px; color: var(--win-gray-dark); font-style: italic;">// Welcome to my portfolio ^___^//</p>
+              </div>
+            </div>
+          </div>
+          <div style="border-left: 3px solid var(--win-blue); padding-left: 14px; margin-bottom: 20px; font-style: italic; font-size: 12px; line-height: 1.7; color: var(--win-gray-dark);">
+            "Being a generalist isn't a weakness—it's the reason I lead."
+          </div>
+          <div style="display: flex; flex-direction: column; gap: 5px; font-size: 11px; margin-bottom: 20px; border-top: 1px solid var(--win-gray-light); padding-top: 14px;">
+            <div style="display: flex; gap: 8px;">
+              <span style="color: var(--win-gray-dark); width: 80px; flex-shrink: 0;">Username:</span>
+              <span style="font-weight: normal; color: inherit;">@wolfsenberg</span>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <span style="color: var(--win-gray-dark); width: 80px; flex-shrink: 0;">Location:</span>
+              <span style="font-weight: normal; color: inherit;">Southside, Taguig City | PUP Manila, Philippines</span>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <span style="color: var(--win-gray-dark); width: 80px; flex-shrink: 0;">Status:</span>
+              <span style="font-weight: bold; color: var(--win-blue);">Available for Opportunities</span>
+            </div>
+          </div>
+          <div style="display: flex; gap: 10px; flex-wrap: wrap;">
+            <a href="https://www.facebook.com/gein3ru" target="_blank" rel="noopener noreferrer" class="win-button" style="text-decoration: none; color: var(--win-black); font-size: 11px; padding: 5px 14px;">Facebook</a>
+            <a href="https://www.instagram.com/_geineru/" target="_blank" rel="noopener noreferrer" class="win-button" style="text-decoration: none; color: var(--win-black); font-size: 11px; padding: 5px 14px;">Instagram</a>
+            <a href="https://www.linkedin.com/in/geineldungao/" target="_blank" rel="noopener noreferrer" class="win-button" style="text-decoration: none; color: var(--win-black); font-size: 11px; padding: 5px 14px;">LinkedIn</a>
+            <a href="https://github.com/wolfsenberg" target="_blank" rel="noopener noreferrer" class="win-button" style="text-decoration: none; color: var(--win-black); font-size: 11px; padding: 5px 14px;">GitHub</a>
+          </div>
+        </div>
+        <div class="win-statusbar">
+          <div class="win-statusbar-field" style="font-size: 10px;">Ready</div>
+          <div class="win-statusbar-field" style="flex: 0; min-width: 110px; font-size: 10px;">IT Student</div>
+        </div>
+      </div>
+
+      <!-- 2. EXPERIENCE -->
+      <div id="experience" class="win-window fade-in" style="max-width: 860px; width: 100%; margin: 0 auto; scroll-margin-top: 8px;">
+        <div class="win-titlebar">
+          <span>Experience</span>
+          <div style="display: flex; gap: 2px;">
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">_</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 7px;">□</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">x</button>
+          </div>
+        </div>
+        <div style="background: var(--win-white); margin: 8px;">
+          
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">Cornersteel Systems Corporation</div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0 3px 12px; margin-bottom: 2px; border-left: 3px solid var(--win-blue); font-size: 11px;">
+              <span style="font-weight: bold;">Full-Stack Web & IoT Developer Intern</span>
+              <span style="color: var(--win-gray-dark); white-space: nowrap; font-size: 10px; flex-shrink: 0;">2026 - Present</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0 3px 12px; margin-bottom: 2px; border-left: 3px solid var(--win-gray-light); font-size: 11px;">
+              <span style="font-weight: normal;">IoT Developer Intern</span>
+              <span style="color: var(--win-gray-dark); white-space: nowrap; font-size: 10px; flex-shrink: 0;">2025</span>
+            </div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+          
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">AWS Cloud Club PUP</div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0 3px 12px; margin-bottom: 2px; border-left: 3px solid var(--win-blue); font-size: 11px;">
+              <span style="font-weight: bold;">Technical Project Manager - DevTeam</span>
+              <span style="color: var(--win-gray-dark); white-space: nowrap; font-size: 10px; flex-shrink: 0;">2025 - Present</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0 3px 12px; margin-bottom: 2px; border-left: 3px solid var(--win-gray-light); font-size: 11px;">
+              <span style="font-weight: normal;">Member - Cloud Computing and Infrastructure Team</span>
+              <span style="color: var(--win-gray-dark); white-space: nowrap; font-size: 10px; flex-shrink: 0;">2024 - Present</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0 3px 12px; margin-bottom: 2px; border-left: 3px solid var(--win-gray-light); font-size: 11px;">
+              <span style="font-weight: normal;">Logistics - Operations Team</span>
+              <span style="color: var(--win-gray-dark); white-space: nowrap; font-size: 10px; flex-shrink: 0;">2024 - 2025</span>
+            </div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+          
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">AWS User Group e:Novators Philippines</div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0 3px 12px; margin-bottom: 2px; border-left: 3px solid var(--win-blue); font-size: 11px;">
+              <span style="font-weight: bold;">Creatives - Office of Creative Services</span>
+              <span style="color: var(--win-gray-dark); white-space: nowrap; font-size: 10px; flex-shrink: 0;">2025 - Present</span>
+            </div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">Google Developer Groups on Campus PUP</div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0 3px 12px; margin-bottom: 2px; border-left: 3px solid var(--win-blue); font-size: 11px;">
+              <span style="font-weight: bold;">Cloud Solutions Team - Compliance Analyst</span>
+              <span style="color: var(--win-gray-dark); white-space: nowrap; font-size: 10px; flex-shrink: 0;">2025 - Present</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0 3px 12px; margin-bottom: 2px; border-left: 3px solid var(--win-gray-light); font-size: 11px;">
+              <span style="font-weight: normal;">Cloud Solutions Team - Curriculum Analyst</span>
+              <span style="color: var(--win-gray-dark); white-space: nowrap; font-size: 10px; flex-shrink: 0;">2024 - 2025</span>
+            </div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">PUP Manila Microsoft Student Community</div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0 3px 12px; margin-bottom: 2px; border-left: 3px solid var(--win-blue); font-size: 11px;">
+              <span style="font-weight: bold;">Member - Cloud Computing Department</span>
+              <span style="color: var(--win-gray-dark); white-space: nowrap; font-size: 10px; flex-shrink: 0;">2024 - Present</span>
+            </div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">Taguig Robotics Team</div>
+            <div style="display: flex; justify-content: space-between; align-items: baseline; gap: 8px; padding: 3px 0 3px 12px; margin-bottom: 2px; border-left: 3px solid var(--win-blue); font-size: 11px;">
+              <span style="font-weight: bold;">Robotics Competitor & Researcher</span>
+              <span style="color: var(--win-gray-dark); white-space: nowrap; font-size: 10px; flex-shrink: 0;">2017 - 2020</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="win-statusbar">
+          <div class="win-statusbar-field" style="font-size: 10px;">6 organizations  |  10 roles</div>
+        </div>
+      </div>
+
+      <!-- 3. PROJECTS -->
+      <div id="projects" class="win-window fade-in" style="max-width: 860px; width: 100%; margin: 0 auto; scroll-margin-top: 8px;">
+        <div class="win-titlebar">
+          <span>Projects</span>
+          <div style="display: flex; gap: 2px;">
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">_</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 7px;">□</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">x</button>
+          </div>
+        </div>
+
+        <div style="display: flex; padding: 6px 8px 0; background: var(--win-gray); border-bottom: 2px solid var(--win-3d-dark);">
+          <button id="tab-technical" style="padding: 4px 16px; font-size: 11px; font-weight: bold; font-family: inherit; cursor: pointer; background: var(--win-gray); color: var(--win-black); border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-gray) var(--win-3d-light); position: relative; top: 2px; margin-right: 2px; z-index: 1;">Technical Projects</button>
+          <button id="tab-graphic" style="padding: 4px 16px; font-size: 11px; font-weight: bold; font-family: inherit; cursor: pointer; background: var(--win-gray-light); color: var(--win-black); border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light); position: relative; top: 0; margin-right: 2px; z-index: 0;">Graphic Projects</button>
+        </div>
+
+        <div style="background: var(--win-white); margin: 8px;">
+          <!-- Technical Tab Content -->
+          <div id="content-technical" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(100px, 1fr)); gap: 8px; padding: 16px;">
+          </div>
+          
+          <!-- Graphic Tab Content -->
+          <div id="content-graphic" style="display: none; padding: 16px;">
+            <img src="/assets/gallery/photo-portfolio.png" alt="Graphic Design Portfolio" style="width: 100%; height: auto;" onerror="this.style.display='none'" />
+            <div style="font-size: 12px; font-style: italic; color: var(--win-gray-dark); margin-top: 10px;"></div>
+          </div>
+        </div>
+
+        <div class="win-statusbar">
+          <div id="status-tab-info" class="win-statusbar-field" style="font-size: 10px;">13 projects — click any folder to view details</div>
+        </div>
+      </div>
+
+      <!-- 4. EDUCATION -->
+      <div id="education" class="win-window fade-in" style="max-width: 860px; width: 100%; margin: 0 auto; scroll-margin-top: 8px;">
+        <div class="win-titlebar">
+          <span>Education</span>
+          <div style="display: flex; gap: 2px;">
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">_</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 7px;">□</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">x</button>
+          </div>
+        </div>
+        <div style="background: var(--win-white); margin: 8px;">
+          
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">Polytechnic University of the Philippines (Sta. Mesa)</div>
+            <div style="padding: 4px 0 4px 12px; border-left: 3px solid var(--win-gray-light); font-size: 11px; margin-bottom: 4px;">
+              <div style="font-weight: bold; margin-bottom: 2px;">College — Information Technology</div>
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+                <span></span>
+                <span style="color: var(--win-gray-dark); font-size: 10px; margin-left: auto; white-space: nowrap;">2023 - Present</span>
+              </div>
+            </div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">Sen. Renato "Compañero" Cayetano Memorial Science and Technology High School</div>
+            <div style="padding: 4px 0 4px 12px; border-left: 3px solid var(--win-gray-light); font-size: 11px; margin-bottom: 4px;">
+              <div style="font-weight: bold; margin-bottom: 2px;">Senior High School — Science, Technology, Engineering, and Mathematics (STEM)</div>
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+                <span style="color: var(--win-blue); font-size: 10px;">★ Graduated with High Honors</span>
+                <span style="color: var(--win-gray-dark); font-size: 10px; margin-left: auto; white-space: nowrap;">2021 - 2023</span>
+              </div>
+            </div>
+            <div style="padding: 4px 0 4px 12px; border-left: 3px solid var(--win-gray-light); font-size: 11px; margin-bottom: 4px;">
+              <div style="font-weight: bold; margin-bottom: 2px;">Junior High School</div>
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+                <span style="color: var(--win-blue); font-size: 10px;">★ Graduated with Honors</span>
+                <span style="color: var(--win-gray-dark); font-size: 10px; margin-left: auto; white-space: nowrap;">2017 - 2021</span>
+              </div>
+            </div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; margin-bottom: 8px;">Rizal Elementary School</div>
+            <div style="padding: 4px 0 4px 12px; border-left: 3px solid var(--win-gray-light); font-size: 11px; margin-bottom: 4px;">
+              <div style="font-weight: bold; margin-bottom: 2px;">Elementary</div>
+              <div style="display: flex; justify-content: space-between; align-items: center; gap: 8px;">
+                <span style="color: var(--win-blue); font-size: 10px;">★ Graduated with Honors</span>
+                <span style="color: var(--win-gray-dark); font-size: 10px; margin-left: auto; white-space: nowrap;">2011 - 2017</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="win-statusbar">
+          <div class="win-statusbar-field" style="font-size: 10px;">3 institutions</div>
+        </div>
+      </div>
+
+      <!-- 5. SKILLS -->
+      <div id="skills" class="win-window fade-in" style="max-width: 860px; width: 100%; margin: 0 auto; scroll-margin-top: 8px;">
+        <div class="win-titlebar">
+          <span>Skills</span>
+          <div style="display: flex; gap: 2px;">
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">_</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 7px;">□</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">x</button>
+          </div>
+        </div>
+        <div style="background: var(--win-white); margin: 8px;">
+          
+          <div style="display: flex; align-items: flex-start;">
+            <div style="width: 130px; flex-shrink: 0; padding: 10px 12px; font-weight: bold; font-size: 11px; background: #F5F5F5; border-right: 1px solid var(--win-gray-light); align-self: stretch; display: flex; align-items: center;">Technical & Programming</div>
+            <div style="padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 5px; flex: 1;">
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Arduino</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">C</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">C++</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Java</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Python</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">HTML</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">CSS</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">JavaScript</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">SQL</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Laravel</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Tailwind CSS</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Google Apps Script</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Prompt Engineering</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Robotics (Hardware & Software)</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Research</span>
+            </div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="display: flex; align-items: flex-start;">
+            <div style="width: 130px; flex-shrink: 0; padding: 10px 12px; font-weight: bold; font-size: 11px; background: #F5F5F5; border-right: 1px solid var(--win-gray-light); align-self: stretch; display: flex; align-items: center;">IT & Networking</div>
+            <div style="padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 5px; flex: 1;">
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Project Management</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">AWS Cloud Concepts</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Network Administration</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Windows Server</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Computer Networking</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Hardware Assembly</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Installation</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Maintenance</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Troubleshooting</span>
+            </div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="display: flex; align-items: flex-start;">
+            <div style="width: 130px; flex-shrink: 0; padding: 10px 12px; font-weight: bold; font-size: 11px; background: #F5F5F5; border-right: 1px solid var(--win-gray-light); align-self: stretch; display: flex; align-items: center;">Multimedia & Design</div>
+            <div style="padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 5px; flex: 1;">
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Photography</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Videography</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Photo Editing</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Video Editing</span>
+            </div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="display: flex; align-items: flex-start;">
+            <div style="width: 130px; flex-shrink: 0; padding: 10px 12px; font-weight: bold; font-size: 11px; background: #F5F5F5; border-right: 1px solid var(--win-gray-light); align-self: stretch; display: flex; align-items: center;">Social Media & Communication</div>
+            <div style="padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 5px; flex: 1;">
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Social Media Management</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Content Strategy</span>
+            </div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="display: flex; align-items: flex-start;">
+            <div style="width: 130px; flex-shrink: 0; padding: 10px 12px; font-weight: bold; font-size: 11px; background: #F5F5F5; border-right: 1px solid var(--win-gray-light); align-self: stretch; display: flex; align-items: center;">Languages</div>
+            <div style="padding: 8px 12px; display: flex; flex-wrap: wrap; gap: 5px; flex: 1;">
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">English</span>
+              <span style="font-size: 10px; padding: 2px 8px; background: var(--win-gray-light); border: 1px solid var(--win-gray-dark); cursor: default;">Filipino</span>
+            </div>
+          </div>
+
+        </div>
+        <div class="win-statusbar">
+          <div class="win-statusbar-field" style="font-size: 10px;">32 skills across 5 categories</div>
+        </div>
+      </div>
+
+      <!-- 6. ACHIEVEMENTS -->
+      <div id="achievements" class="win-window fade-in" style="max-width: 860px; width: 100%; margin: 0 auto; scroll-margin-top: 8px;">
+        <div class="win-titlebar">
+          <span>Achievements & Awards</span>
+          <div style="display: flex; gap: 2px;">
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">_</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 7px;">□</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">x</button>
+          </div>
+        </div>
+        <div style="background: var(--win-white); margin: 8px;">
+          
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; color: var(--win-blue); margin-bottom: 8px;">2026</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">2nd Place — Google Developer Groups PUP: Build with AI Mini Hackathon</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">2nd Place — Zero to Agent Manila: Mini Hackathon</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">Top Builder — Build on Stellar Bootcamp Philippines</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">3rd Place — Arduino Day Philippines 2026: ArduInnovathon</div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; color: var(--win-blue); margin-bottom: 8px;">2025</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">Finished second year with a GPA of 1.22 — Information Technology, Polytechnic University of the Philippines</div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; color: var(--win-blue); margin-bottom: 8px;">2024</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">Finished first year with a GPA of 1.19 — Information Technology, Polytechnic University of the Philippines</div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; color: var(--win-blue); margin-bottom: 8px;">2023</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">Graduated with High Honors — Senior High School, Sen. Renato "Compañero" Cayetano Memorial Science and Technology High School</div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; color: var(--win-blue); margin-bottom: 8px;">2021</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">Graduated with Honors — Junior High School, Sen. Renato "Compañero" Cayetano Memorial Science and Technology High School</div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; color: var(--win-blue); margin-bottom: 8px;">2019</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">Participant — DOST Tagisang Robotics: Design, Build and Play 2019</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">4th Place — Division Science and Technology Fair 2019 - Science Innovation Expo (Team Category)</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">Participant — 1st Filipino Ideas Expo</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">Participant — 18th Philippine Robotics Olympiad - Lego</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">2nd Place — International Robot Olympiad Preliminary 2019 - Robot in Movie (Senior Category)</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">3rd Place — FIRA Roboworldcup Philippine Open - Robot Rugby (U19)</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">1st Place — Summer Sumo Games and Youth Robotics Competition - Robot in Movie (Senior Category)</div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; color: var(--win-blue); margin-bottom: 8px;">2018</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">2nd Place — International Robot Olympiad Pre-Event (Intelligent Machines Contest) 2018 - Robot Farming</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">Participant — RobOlympix 2018 - Puck Collect Challenge</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">2nd Place — MIBF - Manufacturing Technology World - Robotics Competition - Color Sorting</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">3rd Place — Summer Sumo Games and Youth Robotics Competition - Robot in Movie (Senior Category)</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">Participant — International Robot Olympiad 2018 - Robot in Movie (Senior Category)</div>
+          </div>
+          <div style="height: 0; border-top: 1px solid var(--win-3d-dark); border-bottom: 1px solid var(--win-3d-light); margin: 0;"></div>
+
+          <div style="padding: 12px 16px;">
+            <div style="font-weight: bold; font-size: 12px; color: var(--win-blue); margin-bottom: 8px;">2017</div>
+            <div style="font-size: 11px; padding: 3px 0 3px 12px; border-left: 3px solid var(--win-gray-light); margin-bottom: 4px; line-height: 1.5;">Graduated with Honors — Elementary, Rizal Elementary School</div>
+          </div>
+
+        </div>
+        <div class="win-statusbar">
+          <div class="win-statusbar-field" style="font-size: 10px;">21 notable achievements across 8 years</div>
+        </div>
+      </div>
+
+      <!-- 7. CERTIFICATIONS -->
+      <div id="certifications" class="win-window fade-in" style="max-width: 860px; width: 100%; margin: 0 auto; scroll-margin-top: 8px;">
+        <div class="win-titlebar">
+          <span>Certifications</span>
+          <div style="display: flex; gap: 2px;">
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">_</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 7px;">□</button>
+            <button class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px;">x</button>
+          </div>
+        </div>
+        <div style="background: var(--win-white); margin: 8px; padding: 16px;">
+          <div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr)); gap: 16px;">
+            
+            <div style="border: 1px solid var(--win-gray-light); padding: 16px;">
+              <div style="background: var(--win-blue); color: var(--win-white); padding: 4px 10px; margin-bottom: 12px; font-size: 10px; font-weight: bold; text-align: center; letter-spacing: 0.06em;">TESDA NATIONAL CERTIFICATION</div>
+              <div style="font-weight: bold; font-size: 12px; margin-bottom: 10px; line-height: 1.4;">National Certificate III in Visual Graphic Design</div>
+              <div style="font-size: 11px; color: var(--win-gray-dark); margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--win-gray-light);">TESDA: Technical Education and Skills Development Authority</div>
+              <div style="font-size: 10px; color: var(--win-gray-dark); font-family: monospace;">ID: 25130603070903</div>
+            </div>
+
+            <div style="border: 1px solid var(--win-gray-light); padding: 16px;">
+              <div style="background: var(--win-blue); color: var(--win-white); padding: 4px 10px; margin-bottom: 12px; font-size: 10px; font-weight: bold; text-align: center; letter-spacing: 0.06em;">TESDA NATIONAL CERTIFICATION</div>
+              <div style="font-weight: bold; font-size: 12px; margin-bottom: 10px; line-height: 1.4;">National Certificate II in Computer Systems Servicing</div>
+              <div style="font-size: 11px; color: var(--win-gray-dark); margin-bottom: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--win-gray-light);">TESDA: Technical Education and Skills Development Authority</div>
+              <div style="font-size: 10px; color: var(--win-gray-dark); font-family: monospace;">ID: 24131402021182</div>
+            </div>
+
+          </div>
+        </div>
+        <div class="win-statusbar">
+          <div class="win-statusbar-field" style="font-size: 10px;">2 certifications — TESDA</div>
+          <div class="win-statusbar-field" style="flex: 0; min-width: 60px; font-size: 10px; text-align: center;">Verified</div>
+        </div>
+      </div>
+
+    </div>
   </main>
 
-  <footer>© 2026 Geinel Niño A. Dungao. All rights reserved.</footer>
+  <footer style="padding: 20px; text-align: center; font-size: 10px; color: var(--win-gray-dark); position: relative; z-index: 10;">
+    &copy; 2026 Geinel Niño A. Dungao. All rights reserved.
+  </footer>
+  <!-- Chat Tab (FB 2012 Style) -->
+  <div id="chat-tab" class="chat-tab" style="position: fixed; bottom: 32px; right: 20px; width: 220px; height: 28px; background: var(--win-gray); border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light); border-bottom: none; z-index: 8999; cursor: pointer; display: flex; align-items: center; justify-content: space-between; padding: 0 8px; font-weight: bold; font-size: 11px; max-width: calc(100vw - 40px);">
+    <div style="display: flex; align-items: center; gap: 6px;">
+      <div class="chat-status-dot" style="width: 8px; height: 8px; background: #00FF00; border: 1px solid var(--win-3d-dark);"></div>
+      <span class="chat-tab-text">Ask Geinel</span>
+      <span class="chat-tab-icon" style="display: none; font-size: 18px;">💬</span>
+    </div>
+    <div style="font-size: 9px;" id="chat-tab-arrow">▲</div>
+  </div>
 
-  <section class="chat-widget" aria-label="Chat with Geinel">
-    <button class="chat-launcher flex items-center gap-2" type="button"><svg class="w-5 h-5" fill="none"
-        stroke="currentColor" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
-          d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z">
-        </path>
-      </svg> Chat with Geinel</button>
-    <div class="chat-panel" hidden>
-      <div class="chat-head">
-        <b>Chat with Geinel</b>
-        <button type="button" aria-label="Close chat">×</button>
+  <!-- Chatbot Window -->
+  <div id="chat-window" class="win-window" style="display: none; position: fixed; bottom: 60px; right: 20px; width: 260px; height: 320px; z-index: 9000; flex-direction: column; border-bottom: none; max-width: calc(100vw - 40px);">
+    <div class="win-titlebar" id="chat-titlebar" style="cursor: pointer;">
+      <span>Ask Geinel</span>
+      <div style="display: flex; gap: 2px;">
+        <button class="win-button" id="chat-close-btn" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 9px; pointer-events: auto;">_</button>
       </div>
-      <div class="chat-log" id="chat-log">
-        <p class="assistant">Hi! I'm an AI assistant. I can answer questions about Geinel's portfolio, projects, and
-          availability.</p>
+    </div>
+    <div style="flex: 1; display: flex; flex-direction: column; background: var(--win-gray); padding: 4px; overflow: hidden;">
+      <div id="chat-messages" class="win-inset" style="flex: 1; overflow-y: auto; background: var(--win-white); padding: 8px; margin-bottom: 4px; display: flex; flex-direction: column; gap: 8px;">
+        <div style="font-size: 11px;"><strong>Ask Geinel:</strong> Hello! Ask me anything about Geinel's portfolio, skills, or experience.</div>
       </div>
-      <form class="chat-form">
-        <input name="message" autocomplete="off" placeholder="Ask a question..." />
-        <button type="submit">Send</button>
+      <form id="chat-form" style="display: flex; gap: 4px;">
+        <input type="text" id="chat-input" class="win-inset" placeholder="Type a message..." style="flex: 1; padding: 4px; font-family: inherit; font-size: 11px; outline: none; border: 2px solid; border-color: var(--win-3d-dark) var(--win-3d-light) var(--win-3d-light) var(--win-3d-dark);" required>
+        <button type="submit" class="win-button" style="min-width: 40px; padding: 2px 6px;">Send</button>
       </form>
     </div>
-  </section>
+  </div>
 
-  <script src="/config.js"></script>
-  <script src="/main.js"></script>
+  <!-- Taskbar -->
+  <div class="win-taskbar">
+    <button id="start-button" class="win-start-button">
+      <svg viewBox="0 0 16 16" width="14" height="14" style="image-rendering: pixelated; flex-shrink: 0;" aria-hidden="true">
+        <rect x="0" y="0" width="7" height="7" fill="#FF0000" />
+        <rect x="9" y="0" width="7" height="7" fill="#00FF00" />
+        <rect x="0" y="9" width="7" height="7" fill="#0000FF" />
+        <rect x="9" y="9" width="7" height="7" fill="#FFFF00" />
+      </svg>
+      Start
+    </button>
+    <div class="win-taskbar-divider"></div>
+    <div style="flex: 1;"></div>
+    <div class="win-clock" style="text-align: right; line-height: 1.3;">
+      <div id="clock-time" style="font-size: 11px; font-weight: bold;">--:-- --</div>
+      <div id="clock-date" style="font-size: 9px;">--- --- --, ----</div>
+    </div>
+  </div>
+
+  <!-- Project Modal -->
+  <div id="modal-overlay" class="modal-overlay">
+    <div class="win-window" style="width: min(700px, 100%); max-height: 90vh; display: flex; flex-direction: column;" onclick="event.stopPropagation()">
+      <div class="win-titlebar">
+        <span id="modal-title">Project Title</span>
+        <button id="modal-close-btn" class="win-button" style="min-width: 16px; width: 16px; height: 14px; padding: 0; font-size: 10px; line-height: 10px;">x</button>
+      </div>
+      <div class="win-menubar">
+        <div class="win-menu-item"><u>F</u>ile</div>
+        <div class="win-menu-item"><u>E</u>dit</div>
+        <div class="win-menu-item"><u>V</u>iew</div>
+      </div>
+      <div style="flex: 1; overflow-y: auto; background: var(--win-white); padding: 16px;">
+        <div id="modal-type-badge" style="padding: 4px 12px; margin-bottom: 16px; font-size: 11px; font-weight: bold; display: inline-flex; gap: 12px; letter-spacing: 0.06em;">
+          <span>PROJECT TYPE</span>
+          <span id="modal-year" style="opacity: 0.7;">2024</span>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <div style="font-size: 11px; font-weight: bold; margin-bottom: 8px;">Technologies:</div>
+          <div id="modal-techs" style="display: flex; flex-wrap: wrap; gap: 6px;"></div>
+        </div>
+        <div id="modal-images-container" style="margin-bottom: 16px; display: none;">
+          <div style="font-size: 11px; font-weight: bold; margin-bottom: 8px;">Screenshots:</div>
+          <div class="win-inset" style="position: relative; aspect-ratio: 16/9; background: var(--win-black); padding: 0; overflow: hidden; display: flex; align-items: center; justify-content: center;">
+            <img id="modal-image" src="" alt="" style="width: 100%; height: 100%; object-fit: contain;" />
+            <div id="modal-image-controls" style="position: absolute; bottom: 8px; left: 50%; transform: translateX(-50%); display: flex; gap: 8px;">
+              <button id="modal-prev" class="win-button" style="padding: 4px 12px; font-size: 11px;">&lt; Prev</button>
+              <div id="modal-image-count" style="background: var(--win-gray); padding: 4px 12px; font-size: 11px; border: 2px solid; border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light);">1 / 1</div>
+              <button id="modal-next" class="win-button" style="padding: 4px 12px; font-size: 11px;">Next &gt;</button>
+            </div>
+          </div>
+        </div>
+        <div style="margin-bottom: 16px;">
+          <div style="font-size: 11px; font-weight: bold; margin-bottom: 8px;">Description:</div>
+          <div id="modal-description" class="win-inset" style="padding: 12px; font-size: 11px; line-height: 1.6;"></div>
+        </div>
+        <div id="modal-note-container" style="display: none; background: #FFFFCC; border: 1px solid #CCCC99; padding: 12px; font-size: 11px; line-height: 1.5;">
+          <strong>Note:</strong> <span id="modal-note"></span>
+        </div>
+      </div>
+      <div class="win-statusbar">
+        <div id="modal-status-type" class="win-statusbar-field" style="font-size: 11px;">Type</div>
+        <div id="modal-status-tech-count" class="win-statusbar-field" style="flex: 0; min-width: 90px; font-size: 11px;">0 tech(s)</div>
+      </div>
+    </div>
+  </div>
+
+  <script src="main.js"></script>
 </body>
-
 </html>

@@ -12,7 +12,7 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const publicDir = path.join(__dirname, "public");
 
 const app = express();
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 3005;
 const assetBaseUrl = (process.env.ASSET_BASE_URL || "/assets").replace(/\/$/, "");
 const geminiModel = process.env.GEMINI_MODEL || "gemini-2.5-flash-lite";
 const apiKey = process.env.GEMINI_API_KEY;

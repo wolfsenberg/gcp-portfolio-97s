@@ -1,624 +1,479 @@
+/* ══════════════════════════════════════════════════════════
+   GEINEL NIÑO A. DUNGAO — Windows 97 Portfolio
+   PALETTE   #008080 (teal) · #C0C0C0 (gray) · #000080 (navy)
+   FONTS     MS Sans Serif · Fixedsys · VT323
+   STYLE     Windows 97 · Retro OS · Classic Desktop
+   ══════════════════════════════════════════════════════════ */
+
+/* ── Windows 97 Color Tokens ────────────────────────────── */
 :root {
-  color-scheme: light;
-  --bg: #ffffff;
-  --text: #050505;
-  --muted: #555;
-  --faint: #777;
-  --line: #ececec;
-  --soft: #f6f6f6;
-  --soft-2: #eeeeee;
-  --accent: #2563eb;
-  --shadow: 0 18px 35px rgba(0, 0, 0, 0.16);
-  font-family: Arial, Helvetica, sans-serif;
+  --win-desktop:     #008080;
+  --win-gray:        #C0C0C0;
+  --win-gray-dark:   #808080;
+  --win-gray-light:  #DFDFDF;
+  --win-white:       #FFFFFF;
+  --win-black:       #000000;
+  --win-blue:        #000080;
+  --win-blue-light:  #0000FF;
+  --win-teal:        #008080;
+  --win-highlight:   #000080;
+  --win-highlight-text: #FFFFFF;
+  --win-shadow-dark: #000000;
+  --win-shadow:      #808080;
+  --win-face:        #C0C0C0;
+  --win-3d-light:    #FFFFFF;
+  --win-3d-dark:     #808080;
+  --win-3d-darker:   #000000;
 }
 
-.dark {
-  color-scheme: dark;
-  --bg: #070707;
-  --text: #f7f7f7;
-  --muted: #c8c8c8;
-  --faint: #999;
-  --line: #262626;
-  --soft: #121212;
-  --soft-2: #1d1d1d;
-  --shadow: 0 18px 35px rgba(0, 0, 0, 0.55);
-}
-
-* {
-  box-sizing: border-box;
-}
+/* ── Reset ──────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
 
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--text);
-  font-size: 14px;
-  line-height: 1.45;
+  background: var(--win-desktop);
+  color: var(--win-black);
+  font-family: 'Reddit Mono', monospace;
+  font-size: 11px;
+  line-height: 1.4;
+  overflow-x: hidden;
+  cursor: default;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-a {
-  color: inherit;
+/* Windows 97 Selection */
+::selection { 
+  background: var(--win-highlight); 
+  color: var(--win-highlight-text); 
+}
+
+/* Windows 97 Scrollbar */
+::-webkit-scrollbar { width: 16px; height: 16px; }
+::-webkit-scrollbar-track { 
+  background: var(--win-gray);
+  border-left: 1px solid var(--win-3d-light);
+  border-top: 1px solid var(--win-3d-light);
+}
+::-webkit-scrollbar-thumb { 
+  background: var(--win-gray);
+  border: 1px solid;
+  border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light);
+}
+::-webkit-scrollbar-button {
+  background: var(--win-gray);
+  border: 1px solid;
+  border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light);
+  height: 16px;
+  width: 16px;
+}
+
+/* ── Font utilities ─────────────────────────────────────── */
+.f-mono { font-family: 'Reddit Mono', monospace; }
+
+/* ── Windows 97 UI Components ───────────────────────────── */
+
+/* Window Frame */
+.win-window {
+  background: var(--win-gray);
+  border: 1px solid;
+  border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light);
+  box-shadow: 1px 1px 0 var(--win-black);
+  opacity: 1 !important;
+  transform: none !important;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.win-window.fade-in {
+  opacity: 0 !important;
+  transform: translateY(20px) !important;
+}
+
+/* Title Bar */
+.win-titlebar {
+  background: linear-gradient(90deg, var(--win-blue) 0%, #1084D0 100%);
+  color: var(--win-white);
+  padding: 2px 4px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-weight: bold;
+  font-size: 11px;
+  user-select: none;
+  font-family: 'Reddit Mono', monospace;
+}
+
+.win-titlebar.inactive {
+  background: linear-gradient(90deg, var(--win-gray-dark) 0%, var(--win-gray) 100%);
+  color: var(--win-gray-light);
+}
+
+/* Button - Raised */
+.win-button {
+  background: var(--win-gray);
+  border: 2px solid;
+  border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light);
+  padding: 4px 12px;
+  font-family: 'Reddit Mono', monospace;
+  font-size: 11px;
+  cursor: pointer;
+  outline: none;
+  min-width: 75px;
+  text-align: center;
+  color: var(--win-black);
   text-decoration: none;
 }
 
-button,
-input {
-  font: inherit;
+.win-button:active {
+  border-color: var(--win-3d-dark) var(--win-3d-light) var(--win-3d-light) var(--win-3d-dark);
+  padding: 5px 11px 3px 13px;
 }
 
-.page {
-  width: min(864px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 32px 0 76px;
+.win-button:focus {
+  outline: 1px dotted var(--win-black);
+  outline-offset: -4px;
 }
 
-.intro {
+/* Button - Flat (Toolbar) */
+.win-button-flat {
+  background: transparent;
+  border: 1px solid transparent;
+  padding: 3px 6px;
+  cursor: pointer;
+}
+
+.win-button-flat:hover {
+  border: 1px solid;
+  border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light);
+  background: var(--win-gray);
+}
+
+.win-button-flat:active {
+  border-color: var(--win-3d-dark) var(--win-3d-light) var(--win-3d-light) var(--win-3d-dark);
+}
+
+/* Inset Panel */
+.win-inset {
+  background: var(--win-white);
+  border: 2px solid;
+  border-color: var(--win-3d-dark) var(--win-3d-light) var(--win-3d-light) var(--win-3d-dark);
+  padding: 8px;
+}
+
+/* Outset Panel */
+.win-outset {
+  background: var(--win-gray);
+  border: 2px solid;
+  border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light);
+  padding: 8px;
+}
+
+/* Status Bar */
+.win-statusbar {
+  background: var(--win-gray);
+  border-top: 1px solid var(--win-3d-light);
+  padding: 2px 4px;
   display: flex;
-  gap: 24px;
-  align-items: center;
-  margin-bottom: 28px;
+  gap: 4px;
+  font-size: 11px;
 }
 
-.portrait {
-  width: 160px;
-  height: 160px;
-  flex: 0 0 160px;
-  object-fit: cover;
-  border-radius: 2px;
-}
-
-.intro-copy {
-  min-width: 0;
+.win-statusbar-field {
+  border: 1px solid;
+  border-color: var(--win-3d-dark) var(--win-3d-light) var(--win-3d-light) var(--win-3d-dark);
+  padding: 2px 4px;
   flex: 1;
 }
 
-.name-row {
+/* Desktop Icon */
+.win-icon {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 8px;
-}
-
-h1,
-h2,
-h3,
-p {
-  margin: 0;
-}
-
-h1, h2, h3, b {
-  font-weight: 600;
-}
-
-h1 {
-  font-size: 24px;
-  line-height: 1.1;
-}
-
-h2 {
-  margin-bottom: 10px;
-  font-size: 22px;
-  line-height: 1.1;
-}
-
-h3 {
-  margin-top: 15px;
-  margin-bottom: 7px;
-  font-size: 14px;
-}
-
-.verified {
-  width: 17px;
-  height: 17px;
-  flex: 0 0 auto;
-}
-
-.theme-toggle {
-  position: relative;
-  margin-left: auto;
-  width: 42px;
-  height: 24px;
-  border: 0;
-  border-radius: 999px;
-  background: #d7dce3;
+  gap: 4px;
+  padding: 4px;
   cursor: pointer;
+  user-select: none;
+  width: 72px;
+  text-align: center;
+  text-decoration: none;
 }
 
-.theme-toggle span {
-  position: absolute;
-  top: 3px;
-  left: 3px;
-  width: 18px;
-  height: 18px;
-  border-radius: 50%;
-  background: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-  transition: transform 160ms ease;
+.win-icon:hover .win-icon-label,
+.win-icon:focus .win-icon-label {
+  background: var(--win-highlight);
+  color: var(--win-highlight-text);
+  outline: 1px dotted var(--win-white);
 }
 
-.dark .theme-toggle span {
-  transform: translateX(18px);
+.win-icon-image {
+  width: 40px;
+  height: 40px;
+  image-rendering: pixelated;
+  flex-shrink: 0;
 }
 
-.location {
-  margin-top: 5px;
-  font-size: 13px;
-}
-
-.role-row {
-  display: flex;
-  align-items: center;
-  gap: 18px;
-  margin-top: 14px;
-}
-
-.role-row p {
-  white-space: normal;
-}
-
-.cta-row {
-  display: grid;
-  grid-template-columns: 170px 130px 1fr;
-  margin-top: 19px;
-  border: 1px solid var(--line);
-  border-left: 0;
-  border-right: 0;
-}
-
-.button {
-  display: flex;
-  align-items: center;
-  gap: 7px;
-  min-height: 42px;
-  padding: 0 16px;
-  border-right: 1px solid var(--line);
-  font-size: 13px;
-  font-weight: 600;
-}
-
-.button.primary {
-  justify-content: center;
-  color: #fff;
-  background: #000;
-}
-
-.dark .button.primary {
-  background: #f3f3f3;
-  color: #000;
-}
-
-.content-grid {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) 270px;
-  gap: 24px;
-}
-
-.about p + p {
-  margin-top: 24px;
-}
-
-.side-rail {
-  grid-row: span 3;
-}
-
-.experience ol {
-  position: relative;
-  list-style: none;
-  margin: 0;
-  padding: 0 0 0 22px;
-}
-
-.experience ol::before {
-  content: "";
-  position: absolute;
-  top: 8px;
-  bottom: 8px;
-  left: 7px;
-  width: 1px;
-  background: var(--line);
-}
-
-.experience li {
-  position: relative;
-  min-height: 39px;
-  padding-right: 0;
-  margin-bottom: 17px;
-}
-
-.experience li::before {
-  content: "";
-  position: absolute;
-  top: 4px;
-  left: -22px;
-  width: 9px;
-  height: 9px;
-  background: var(--bg);
-  border: 1px solid #d5d5d5;
-}
-
-.experience li.active::before {
-  background: var(--text);
-  border-color: var(--text);
-}
-
-.experience b,
-.experience span,
-.experience time {
-  display: block;
-}
-
-.experience b {
-  font-size: 15px;
-}
-
-.experience span,
-.experience time {
-  font-size: 12px;
-}
-
-.experience time {
-  color: var(--faint);
-  margin-top: 2px;
-}
-
-.section-head {
-  display: flex;
-  justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
-}
-
-.section-head a {
-  font-size: 12px;
-}
-
-.stack,
-.projects,
-.certs,
-.recommendations {
-  margin-top: 8px;
-}
-
-.tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 9px 17px;
-  padding-bottom: 10px;
-  border-bottom: 1px solid var(--line);
-}
-
-.tags span {
-  font-size: 12px;
-}
-
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px solid var(--line);
-  border-left: 1px solid var(--line);
-}
-
-.card-grid a {
-  min-height: 90px;
-  padding: 14px;
-  border-right: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-}
-
-.card-grid b,
-.card-grid span,
-.card-grid code {
-  display: block;
-}
-
-.card-grid span {
-  font-size: 13px;
-}
-
-.card-grid code {
-  width: max-content;
-  margin-top: 7px;
-  padding: 4px 8px;
-  color: var(--text);
-  background: var(--soft);
-}
-
-.certs a {
-  display: block;
-  padding: 11px 12px;
-  margin-bottom: 6px;
-  background: linear-gradient(90deg, var(--soft), transparent);
-}
-
-.certs span,
-.recommendation-person span {
-  display: block;
-  font-size: 12px;
-}
-
-.recommendations blockquote {
-  min-height: 105px;
-  margin: 0;
-  font-family: Georgia, serif;
-  font-size: 14px;
-}
-
-.recommendation-person {
-  padding-top: 14px;
-  border-top: 1px solid var(--line);
-}
-
-.dots {
-  display: flex;
-  gap: 6px;
-  margin-top: 18px;
-}
-
-.dots button {
-  width: 6px;
-  height: 6px;
-  padding: 0;
-  border: 0;
-  background: #d0d0d0;
-}
-
-.dots button.active {
-  background: var(--text);
-}
-
-.link-panels {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
-  padding-top: 30px;
-  border-top: 1px solid var(--line);
-}
-
-.link-panels > div {
-  padding: 0;
-}
-
-.link-panels p {
-  margin-bottom: 12px;
-  font-size: 11px;
-  font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  opacity: 0.5;
-}
-
-.link-panels a,
-.link-panels span {
-  display: block;
-  font-size: 13px;
-  font-weight: 500;
-  line-height: 1.6;
-}
-
-.link-panels span {
-  font-weight: 400;
-  opacity: 0.7;
-}
-
-.contact-links a {
-  padding: 8px 0;
-}
-
-.contact-links small,
-.contact-links b {
-  display: block;
-}
-
-.gallery {
-  margin-top: 34px;
-}
-
-.gallery-shell {
-  position: relative;
-  overflow: hidden;
-  min-height: 196px;
-}
-
-.gallery-track {
-  display: flex;
-  gap: 10px;
-  transition: transform 220ms ease;
-  will-change: transform;
-}
-
-.gallery-track img {
-  width: 196px;
-  height: 196px;
-  flex: 0 0 196px;
-  object-fit: cover;
-}
-
-.gallery-prev,
-.gallery-next {
-  position: absolute;
-  z-index: 2;
-  top: 50%;
-  width: 32px;
-  height: 44px;
-  border: 1px solid var(--line);
-  color: var(--text);
-  background: var(--bg);
-  transform: translateY(-50%);
-  cursor: pointer;
-}
-
-.gallery-prev {
-  left: 0;
-}
-
-.gallery-next {
-  right: 0;
-}
-
-footer {
-  width: min(864px, calc(100% - 32px));
-  margin: 0 auto;
-  padding: 36px 0;
-  border-top: 1px solid var(--line);
+.win-icon-label {
+  color: var(--win-white);
+  font-size: 10px;
+  line-height: 1.2;
+  text-shadow: 1px 1px 1px rgba(0,0,0,0.9);
+  word-break: break-word;
+  padding: 1px 3px;
+  width: 72px;
   text-align: center;
 }
 
-.chat-widget {
+/* Menu Bar */
+.win-menubar {
+  background: var(--win-gray);
+  border-bottom: 1px solid var(--win-3d-light);
+  display: flex;
+  padding: 2px;
+  gap: 2px;
+}
+
+.win-menu-item {
+  padding: 4px 8px;
+  cursor: pointer;
+}
+
+.win-menu-item:hover {
+  background: var(--win-highlight);
+  color: var(--win-highlight-text);
+}
+
+/* Taskbar */
+.win-taskbar {
   position: fixed;
-  right: 24px;
-  bottom: 22px;
-  z-index: 10;
-}
-
-.chat-launcher {
-  height: 44px;
-  padding: 0 18px;
-  border: 0;
-  color: #fff;
-  background: #111;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.chat-panel {
-  position: absolute;
+  bottom: 0;
+  left: 0;
   right: 0;
-  bottom: 56px;
-  width: 340px;
-  overflow: hidden;
-  background: var(--bg);
-  border: 1px solid var(--line);
-  box-shadow: var(--shadow);
-}
-
-.chat-head {
+  height: 32px;
+  background: var(--win-gray);
+  border-top: 2px solid var(--win-3d-light);
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 12px 14px;
-  color: #fff;
-  background: #111;
+  padding: 2px;
+  gap: 2px;
+  z-index: 9999;
 }
 
-.chat-head button {
-  border: 0;
-  color: #fff;
-  background: transparent;
-  font-size: 22px;
+.win-start-button {
+  background: var(--win-gray);
+  border: 2px solid;
+  border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light);
+  padding: 2px 6px;
+  font-weight: bold;
+  font-size: 11px;
   cursor: pointer;
-}
-
-.chat-log {
   display: flex;
-  flex-direction: column;
-  gap: 8px;
-  max-height: 300px;
-  overflow-y: auto;
-  padding: 12px;
+  align-items: center;
+  gap: 4px;
+  height: 24px;
 }
 
-.chat-log p {
-  width: fit-content;
-  max-width: 88%;
-  padding: 9px 10px;
-  background: var(--soft);
-  border: 1px solid var(--line);
+.win-start-button:active, .win-start-button.active {
+  border-color: var(--win-3d-dark) var(--win-3d-light) var(--win-3d-light) var(--win-3d-dark);
+  padding: 3px 5px 1px 7px;
 }
 
-.chat-log .user {
+.win-taskbar-divider {
+  width: 2px;
+  height: 24px;
+  border-left: 1px solid var(--win-3d-dark);
+  border-right: 1px solid var(--win-3d-light);
+}
+
+.win-clock {
+  border: 1px solid;
+  border-color: var(--win-3d-dark) var(--win-3d-light) var(--win-3d-light) var(--win-3d-dark);
+  padding: 2px 8px;
+  font-size: 11px;
   margin-left: auto;
-  color: #fff;
-  background: var(--accent);
-  border-color: var(--accent);
 }
 
-.chat-form {
-  display: grid;
-  grid-template-columns: 1fr 68px;
-  border-top: 1px solid var(--line);
+/* Tab Control */
+.win-tabs {
+  display: flex;
+  gap: 2px;
+  margin-bottom: -2px;
 }
 
-.chat-form input {
-  min-width: 0;
-  border: 0;
-  padding: 12px;
-  color: var(--text);
-  background: var(--bg);
+.win-tab {
+  background: var(--win-gray);
+  border: 2px solid;
+  border-color: var(--win-3d-light) var(--win-3d-dark) transparent var(--win-3d-light);
+  padding: 4px 16px;
+  cursor: pointer;
+  position: relative;
+  top: 2px;
 }
 
-.chat-form button {
-  border: 0;
-  color: #fff;
-  background: #111;
-  font-weight: 600;
+.win-tab.active {
+  background: var(--win-gray);
+  border-bottom-color: var(--win-gray);
+  top: 0;
+  padding-bottom: 6px;
 }
 
-@media (max-width: 760px) {
-  .page {
-    width: min(100% - 24px, 430px);
-    padding-top: 18px;
+/* Animations */
+@keyframes win-startup {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.win-startup {
+  animation: win-startup 0.2s ease-out;
+}
+
+@keyframes win-ticker {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-100%); }
+}
+
+/* Modal specific styles */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0,0,0,0.5);
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+.start-menu-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9998;
+  display: none;
+}
+
+.start-menu-overlay.active {
+  display: block;
+}
+
+.start-menu {
+  position: fixed;
+  bottom: 32px;
+  left: 4px;
+  width: min(300px, calc(100vw - 8px));
+  z-index: 9999;
+  display: none;
+}
+
+.start-menu.active {
+  display: block;
+  animation: slide-up 0.12s ease-out;
+}
+
+@keyframes slide-up {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.project-folder:hover .fl {
+  background: var(--win-highlight) !important;
+  color: var(--win-highlight-text) !important;
+}
+
+.start-menu-link:hover {
+  background: var(--win-highlight) !important;
+  color: var(--win-highlight-text) !important;
+}
+
+/* Responsive Overrides */
+@media screen and (max-width: 768px) {
+  #desktop-icons {
+    display: none !important;
+  }
+  
+  #main-content {
+    padding: 44px 10px 140px 10px !important;
   }
 
-  .intro {
-    align-items: flex-start;
-    gap: 14px;
+  .win-window {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+  }
+  
+  #modal-window {
+    width: 95% !important;
+    max-height: 95vh !important;
   }
 
-  .portrait {
-    width: 104px;
-    height: 104px;
-    flex-basis: 104px;
+  .win-menubar {
+    font-size: 10px !important;
+    flex-wrap: wrap;
   }
 
-  h1 {
-    font-size: 20px;
+  /* Chat Assistive Touch */
+  #chat-tab {
+    width: fit-content !important;
+    height: 20px !important;
+    border-radius: 0 !important;
+    border: 2px solid var(--win-3d-light) !important;
+    border-color: var(--win-3d-light) var(--win-3d-dark) var(--win-3d-dark) var(--win-3d-light) !important;
+    bottom: 36px !important;
+    right: 8px !important;
+    justify-content: center !important;
+    padding: 0 4px !important;
+    box-shadow: none !important;
+    background: var(--win-gray) !important;
+    z-index: 9990 !important;
+  }
+  .chat-tab-text { display: inline !important; font-size: 8px !important; white-space: nowrap !important; }
+  .chat-tab-icon { display: none !important; }
+  #chat-tab-arrow { display: none !important; }
+  .chat-status-dot {
+    position: static !important;
+    width: 5px !important;
+    height: 5px !important;
+    border-radius: 0 !important;
+    border: 1px solid var(--win-3d-dark) !important;
+    margin-right: 3px !important;
   }
 
-  .role-row {
-    display: block;
+  /* Modal Image Controls */
+  #modal-image-controls {
+    bottom: auto !important;
+    top: 50% !important;
+    left: 0 !important;
+    right: 0 !important;
+    transform: translateY(-50%) !important;
+    justify-content: space-between !important;
+    padding: 0 12px !important;
+    pointer-events: none !important;
+    width: 100% !important;
   }
-
-  .role-row p {
-    white-space: normal;
-    margin-bottom: 10px;
+  #modal-prev, #modal-next {
+    pointer-events: auto !important;
+    font-size: 0 !important; /* Hide the text */
+    padding: 0 !important;
+    width: 14px !important;
+    height: 14px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    min-width: unset !important;
   }
-
-  .cta-row {
-    grid-template-columns: 1fr;
+  #modal-prev::after {
+    content: "<" !important;
+    font-size: 8px !important;
+    font-weight: bold !important;
   }
-
-  .button {
-    border-bottom: 1px solid var(--line);
+  #modal-next::after {
+    content: ">" !important;
+    font-size: 8px !important;
+    font-weight: bold !important;
   }
-
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .side-rail {
-    grid-row: auto;
-  }
-
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .gallery-track img {
-    width: 150px;
-    height: 150px;
-    flex-basis: 150px;
-  }
-
-  .gallery-shell {
-    min-height: 150px;
-  }
-
-  .chat-widget {
-    right: 12px;
-    bottom: 12px;
-  }
-
-  .chat-panel {
-    width: min(340px, calc(100vw - 24px));
+  #modal-image-count {
+    display: none !important;
   }
 }
