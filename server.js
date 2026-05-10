@@ -282,7 +282,7 @@ app.post("/api/chat", requireAllowedChatOrigin, chatLimiter, async (req, res) =>
 
   try {
     const knowledge = await getKnowledgeBase();
-    const responseStream = await genAI.models.generateContentStream({
+    const response = await genAI.models.generateContent({
       model: geminiModel,
       contents: cleanMessages
         .map((message) => `${message.role === "assistant" ? "Assistant" : "Visitor"}: ${message.text}`)
@@ -290,22 +290,16 @@ app.post("/api/chat", requireAllowedChatOrigin, chatLimiter, async (req, res) =>
       config: {
         temperature: 0.2,
         maxOutputTokens: 220,
+        thinkingConfig: {
+          thinkingBudget: 0
+        },
         safetySettings,
         systemInstruction:
           `You are the assistant for Geinel Niño A. Dungao's personal portfolio. Use only the Markdown knowledge base below as context.\n\nRules:\n- Answer naturally in 1-4 short sentences.\n- Only answer questions that are directly relevant to Geinel's portfolio, projects, skills, experience, and contact details.\n- If the visitor asks about anything else, politely refuse and say you only answer questions about Geinel's professional background.\n- If the visitor greets you, briefly say what you can answer about.\n- Do not invent facts. Do not mention implementation details.\n\nMarkdown knowledge base:\n${knowledge}`
       }
     });
 
-    res.setHeader('Content-Type', 'text/event-stream');
-    res.setHeader('Cache-Control', 'no-cache');
-    res.setHeader('Connection', 'keep-alive');
-
-    for await (const chunk of responseStream) {
-      if (chunk.text) {
-        res.write(`data: ${JSON.stringify({ text: chunk.text })}\n\n`);
-      }
-    }
-    res.end();
+    res.json({ reply: response.text || "I could not answer that from the template notes." });
   } catch (error) {
     console.error("Gemini chat error", error);
     res.status(500).json({ error: "Chat failed. Please try again." });

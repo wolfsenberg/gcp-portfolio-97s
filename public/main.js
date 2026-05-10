@@ -364,52 +364,13 @@ document.addEventListener('DOMContentLoaded', () => {
           body: JSON.stringify({ messages: messageHistory })
         });
         
-        if (!response.ok) {
-          const data = await response.json().catch(() => ({}));
-          addChatMessage('assistant', data.error || 'Error connecting to the chat server.');
-          return;
-        }
-
-        const msgDiv = document.createElement('div');
-        msgDiv.style.fontSize = '11px';
-        const strong = document.createElement('strong');
-        strong.textContent = 'Ask Geinel: ';
-        msgDiv.appendChild(strong);
-        const textNode = document.createTextNode('');
-        msgDiv.appendChild(textNode);
-        chatMessages.appendChild(msgDiv);
+        const data = await response.json();
         
-        const reader = response.body.getReader();
-        const decoder = new TextDecoder("utf-8");
-        let fullReply = '';
-
-        while (true) {
-          const { done, value } = await reader.read();
-          if (done) break;
-          
-          const chunkStr = decoder.decode(value, { stream: true });
-          const lines = chunkStr.split('\n');
-          
-          for (const line of lines) {
-            if (line.startsWith('data: ')) {
-              try {
-                const data = JSON.parse(line.slice(6));
-                if (data.text) {
-                  fullReply += data.text;
-                  textNode.textContent = fullReply;
-                  chatMessages.scrollTop = chatMessages.scrollHeight;
-                }
-              } catch (e) {
-                console.error("SSE parse error", e);
-              }
-            }
-          }
-        }
-        
-        if (fullReply) {
-          messageHistory.push({ role: 'assistant', text: fullReply });
+        if (response.ok && data.reply) {
+          addChatMessage('assistant', data.reply);
+          messageHistory.push({ role: 'assistant', text: data.reply });
         } else {
-          textNode.textContent = 'I could not answer that from the template notes.';
+          addChatMessage('assistant', data.error || 'Error connecting to the chat server.');
         }
       } catch (error) {
         addChatMessage('assistant', 'Error connecting to the chat server.');
